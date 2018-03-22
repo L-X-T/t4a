@@ -1452,6 +1452,17 @@ select {
   background-position: 97.5% center;
 }
 
+/* line 2, ../scss/modules/_products.scss */
+.woocommerce #content div.product.style-1col div.images {
+  float: none;
+  width: 100%;
+}
+/* line 7, ../scss/modules/_products.scss */
+.woocommerce #content div.product.style-1col div.summary {
+  float: none;
+  width: 100%;
+}
+
 /*********************
 BASE (MOBILE) SIZE
 This are the mobile styles. It's what people see on their phones. If

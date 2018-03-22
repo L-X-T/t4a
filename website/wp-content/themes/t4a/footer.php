@@ -45,7 +45,8 @@
                         <?php $socialIcons = get_field('opt_social_icons', 'options'); if ($socialIcons) : ?>
                         <ul class="social-icons">
                             <?php foreach($socialIcons as $socialIcon) {
-		                        echo '<li><a href="' . $socialIcon['link'] . '" target="_blank"><img src="' . $socialIcon['icon'] .'" /></a></li>';
+	                            if (empty($socialIcon['link'])) continue;
+	                            echo '<li><a href="' . $socialIcon['link'] . '" target="_blank" title="' . $socialIcon['link_title'] . '"><img src="' . $socialIcon['icon'] .'" /></a></li>';
                             } ?>
                         </ul>
                         <?php endif; ?>

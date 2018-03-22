@@ -28,7 +28,7 @@
         },
         {
             "key": "field_5ab3b193f40ee",
-            "label": "Social Icons (Footer)",
+            "label": "Social Icons",
             "name": "opt_social_icons",
             "type": "repeater",
             "instructions": "",
@@ -75,7 +75,7 @@
                     "name": "link",
                     "type": "url",
                     "instructions": "",
-                    "required": 1,
+                    "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -84,6 +84,63 @@
                     },
                     "default_value": "https:\/\/www.bla.com",
                     "placeholder": ""
+                },
+                {
+                    "key": "field_5ab3c8629409b",
+                    "label": "Link Title",
+                    "name": "link_title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5ab3c5c1f39fe",
+                    "label": "Sharer",
+                    "name": "sharer",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5ab3c85d9409a",
+                    "label": "Sharer Title",
+                    "name": "sharer_title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 }
             ]
         }
@@ -105,5 +162,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1521727765
+    "modified": 1521731712
 }
