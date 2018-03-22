@@ -1,3 +1,101 @@
+ServerSignature Off
+Options -Indexes
+
+
+# Add MIME types
+AddType application/postscript .ai .eps .ps
+AddType application/vnd.ms-fontobject .eot
+AddType application/x-font-woff .woff
+AddType application/zip .zip
+AddType font/opentype .otf
+AddType font/truetype .ttf
+AddType image/svg+xml .svg
+AddType image/tiff .tiff .tif
+AddType image/x-eps .eps
+AddType image/x-icon .ico
+AddType video/ogg .ogv
+AddType video/mp4 .mp4
+AddType video/webm .webm
+
+
+# Cache expires
+<IfModule mod_expires.c>
+  ExpiresActive On
+  # Text/HTML
+  ExpiresByType text/html "access plus 1 day"
+  # CSS/JS
+  ExpiresByType text/css "access plus 2 days"
+  ExpiresByType application/javascript "access plus 2 days"
+  # Default
+  ExpiresDefault "access plus 30 days"
+</IfModule>
+
+# Cache control
+<IfModule mod_headers.c>
+  # Text
+  <FilesMatch "\.(docx|htm|html|pdf|txt|zip)$">
+    FileETag None
+    Header set Cache-Control "private, max-age=86400"
+  </FilesMatch>
+  # CSS/JS
+  <FilesMatch "\.(css|js)$">
+    FileETag None
+    Header set Cache-Control "public, max-age=172800"
+  </FilesMatch>
+  # Images
+  <FilesMatch "\.(gif|ico|jpg|jpeg|png|svg)$">
+    FileETag -INode MTime Size
+    Header unset Last-Modified
+    Header set Cache-Control "private, max-age=2592000"
+  </FilesMatch>
+</IfModule>
+
+# Add g-zip compression
+<IfModule mod_filter.c>
+	# DEFLATE by type
+	AddOutputFilterByType DEFLATE "application/atom+xml" \
+		"application/javascript" \
+		"application/json" \
+		"application/ld+json" \
+		"application/manifest+json" \
+		"application/postscript" \
+		"application/rdf+xml" \
+		"application/rss+xml" \
+		"application/schema+json" \
+		"application/vnd.geo+json" \
+		"application/vnd.ms-fontobject" \
+		"application/x-font-ttf" \
+		"application/x-javascript" \
+		"application/x-web-app-manifest+json" \
+		"application/xhtml+xml" \
+		"application/xml" \
+		"font/eot" \
+		"font/opentype" \
+		"font/truetype" \
+		"image/bmp" \
+		"image/png" \
+		"image/svg+xml" \
+		"image/tiff" \
+		"image/vnd.microsoft.icon" \
+		"image/x-eps" \
+		"image/x-icon" \
+		"text/cache-manifest" \
+		"text/css" \
+		"text/html" \
+		"text/javascript" \
+		"text/plain" \
+		"text/vcard" \
+		"text/vnd.rim.location.xloc" \
+		"text/vtt" \
+		"text/x-component" \
+		"text/x-cross-domain-policy" \
+		"text/xml" \
+		"video/ogg" \
+		"video/mp4" \
+		"video/webm"
+	# DEFLATE by extension
+	AddOutputFilter DEFLATE css htm html js xml
+</IfModule>
 
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
@@ -8,5 +106,4 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]
 </IfModule>
-
 # END WordPress
