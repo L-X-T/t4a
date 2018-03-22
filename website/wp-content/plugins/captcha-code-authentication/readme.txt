@@ -72,6 +72,9 @@ Uninstalling is as simple as deactivating and deleting the plugin.
 
 == Change Log ==
 
+= Version 2.6.5 =
+* Minor bug fix on variable declaration
+
 = Version 2.6.3 =
 * Hungary translation added
 

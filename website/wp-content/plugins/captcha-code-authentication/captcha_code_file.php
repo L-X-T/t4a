@@ -5,6 +5,7 @@ session_start();
 $image_width = 120;
 $image_height = 40;
 
+$characters_on_image = 6;
 if(isset($_SESSION['total_no_of_characters']))
 	$characters_on_image = $_SESSION['total_no_of_characters'];
 
