@@ -73,8 +73,10 @@ if ( ! isset( $content_width ) ) {
 /************* THUMBNAIL SIZE OPTIONS *************/
 
 // Thumbnail sizes
-add_image_size( 'bones-thumb-600', 600, 150, true );
-add_image_size( 'bones-thumb-300', 300, 100, true );
+add_image_size( 'full-width', 1920, 1280, true );
+add_image_size( 'two-thirds', 1280, 960, true );
+add_image_size( 'half-width', 960, 640, true );
+add_image_size( 'portrait', 640, 1280, true );
 
 /*
 to add more sizes, simply copy a line from above
@@ -100,8 +102,10 @@ add_filter( 'image_size_names_choose', 'bones_custom_image_sizes' );
 
 function bones_custom_image_sizes( $sizes ) {
     return array_merge( $sizes, array(
-        'bones-thumb-600' => __('600px by 150px'),
-        'bones-thumb-300' => __('300px by 100px'),
+        'full-width' => __('Full width - 1920 x 1280'),
+        'two-thirds' => __('Two thirds - 1280 x 960'),
+        'half-width' => __('Half width - 960 x 640'),
+        'portrait' => __('Portrait - 1280 x 640'),
     ) );
 }
 
@@ -244,4 +248,15 @@ function bones_fonts() {
 
 add_action('wp_enqueue_scripts', 'bones_fonts');
 
+
+function get_menu_by_location( $location ) {
+	if( empty($location) ) return false;
+
+	$locations = get_nav_menu_locations();
+	if( ! isset( $locations[$location] ) ) return false;
+
+	$menu_obj = get_term( $locations[$location], 'nav_menu' );
+
+	return $menu_obj;
+}
 /* DON'T DELETE THIS CLOSING TAG */ ?>

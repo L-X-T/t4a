@@ -1,0 +1,85 @@
+{
+    "key": "group_5ab3aff374ef8",
+    "title": "Social Icons (Footer)",
+    "fields": [
+        {
+            "key": "field_5ab3b193f40ee",
+            "label": "Social Icons",
+            "name": "opt_social_icons",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
+            "button_label": "Social Icon hinzufügen",
+            "sub_fields": [
+                {
+                    "key": "field_5ab3b1a3f40ef",
+                    "label": "Icon",
+                    "name": "icon",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "preview_size": "full",
+                    "library": "all",
+                    "min_width": 100,
+                    "min_height": 100,
+                    "min_size": "",
+                    "max_width": 100,
+                    "max_height": 100,
+                    "max_size": "",
+                    "mime_types": "png"
+                },
+                {
+                    "key": "field_5ab3b1bdf40f0",
+                    "label": "Link",
+                    "name": "link",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "https:\/\/www.bla.com",
+                    "placeholder": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1521726575
+}
