@@ -36,6 +36,9 @@ the whole project.
 // import mixins
 @import "partials/mixins";
 
+// import mixins
+@import "partials/extends";
+
 // the grid
 @import "partials/grid";
 
@@ -55,6 +58,9 @@ you hate oysters, then the world is your peanut butter & jelly sandwich.
 
 // forms (inputs & labels)
 @import "modules/forms";
+
+// products
+@import "modules/elementor";
 
 // products
 @import "modules/products";

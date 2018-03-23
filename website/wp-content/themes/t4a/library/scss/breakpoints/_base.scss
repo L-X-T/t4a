@@ -16,12 +16,11 @@ GENERAL STYLES
 *********************/
 
 body {
-	font-family: $lato;
+	font-family: $sans-serif;
 	font-size: 100%;
 	line-height: 1.5;
 	color: $text-color;
-	background-color: $gray;
-  	-webkit-font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
 }
 
@@ -153,7 +152,30 @@ HEADER STYLES
 *********************/
 
 .header {
-	background-color: $black;
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+
+	font-size: 14px;
+	font-weight: bold;
+
+	.t4a-main-menu {
+		margin-top: 2em;
+		margin-left: 2em;
+	}
+
+	.t4a-newsletter-link {
+		position: absolute;
+		right: 2em;
+		top: 2em;
+		padding: 0.75em;
+
+		a {
+			color: $white;
+			text-decoration: none;
+			text-transform: uppercase;
+		}
+	}
 }
 
 	#logo {
@@ -183,10 +205,11 @@ and more scalable.
 	li {
 
 		a {
-			display: block;
+			display: inline-block;
+			padding: 0.75em;
 			color: $white;
 			text-decoration: none;
-			padding: 0.75em;
+			text-transform: uppercase;
 
 			/*
 			remember this is for mobile ONLY, so there's no need
@@ -248,31 +271,53 @@ and more scalable.
 
 
 /*********************
+LOGO HEADER
+*********************/
+
+#logo-header {
+	position: absolute;
+	display: block;
+	z-index: 10;
+
+	margin-top: 2em;
+	width: 100%;
+	text-align: center;
+
+	.home & {
+		margin-top: 20vh;
+	}
+
+	a {
+		display: inline-block;
+		max-width: 50%;
+
+		img {
+			width: 100%;
+		}
+	}
+}
+
+
+/*********************
 POSTS & CONTENT STYLES
 *********************/
 
 #content {
-	margin-top: 1.5em;
+
 }
 
 		.hentry {
 			background-color: $white;
 			border-radius: 3px;
 			margin-bottom: 1.5em;
-			border: 1px solid $border-color;
 
 			header {
-				border-bottom: 1px solid $light-gray;
-				padding: 1.5em;
 			}
 
 			footer {
-				padding: 1.5em;
-				border-top: 1px solid $light-gray;
-
-				p {
-					margin: 0;
-				}
+				height: 300px;
+				background-size: cover;
+				background-position: center center;
 			}
 
 		} /* end .hentry */
@@ -312,8 +357,6 @@ POSTS & CONTENT STYLES
 
 		/* entry content */
 		.entry-content {
-			padding: 1.5em 1.5em 0;
-
 			p {
 				margin: 0 0 1.5em;
 			}
@@ -403,8 +446,8 @@ POSTS & CONTENT STYLES
 			}
 
 			img {
-				margin: 0 0 1.5em 0;
-				max-width: 100%;
+				margin: 0;
+				width: 100%;
 				height: auto;
 			}
 
@@ -439,9 +482,9 @@ POSTS & CONTENT STYLES
 		} /* end .entry-content */
 
 		.wp-caption {
+			position: relative;
 			max-width: 100%;
-			background: #eee;
-			padding: 5px;
+			@extend %caption-font;
 
 			/* images inside wp-caption */
 			img {
@@ -450,9 +493,10 @@ POSTS & CONTENT STYLES
 				width: 100%;
 			}
 
-			p.wp-caption-text {
-				font-size: 0.85em;
-				margin: 4px 0 7px;
+			.wp-caption-text {
+				position: absolute;
+				width: 100%;
+				top: 50%;
 				text-align: center;
 			}
 

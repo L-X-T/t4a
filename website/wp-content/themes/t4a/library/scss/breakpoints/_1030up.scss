@@ -12,3 +12,17 @@ be seen on the Desktop.
 .wrap {
   width: 1040px;
 }
+
+/*********************
+LOGO HEADER
+*********************/
+
+#logo-header {
+  .home & {
+    margin-top: 40vh;
+  }
+}
+
+.hentry footer {
+  height: 600px;
+}

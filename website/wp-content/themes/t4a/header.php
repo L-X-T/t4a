@@ -52,9 +52,9 @@
 
 			<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 
-				<div id="inner-header" class="wrap cf">
+				<div id="inner-header" class="cf">
 
-					<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+					<nav class="t4a-main-menu" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 						<?php wp_nav_menu(array(
     					         'container' => false,                           // remove nav container
     					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
@@ -71,7 +71,7 @@
 
 					</nav>
 
-                    <nav role="navigation">
+                    <nav class="t4a-newsletter-link" role="navigation">
                         <a href="#">Newsletter Signup</a>
                     </nav>
 

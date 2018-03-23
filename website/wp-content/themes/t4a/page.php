@@ -2,7 +2,7 @@
 
 			<div id="content">
 
-				<div id="inner-content" class="wrap cf">
+				<div id="inner-content" class="<?php if (!is_front_page()) : ?>wrap <?php endif; ?>cf">
 
 						<main id="main" class="m-all cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
@@ -10,7 +10,7 @@
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
                                 
-                                <div class="logo"><a href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php the_field('opt_logo_header', 'options'); ?>" alt="Time4Africa"></a></div>
+                                <div id="logo-header"><a href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php the_field('opt_logo_header', 'options'); ?>" alt="Time4Africa"></a></div>
                                 
 								<section class="entry-content cf" itemprop="articleBody">
 									<?php
@@ -38,11 +38,13 @@
 									?>
 								</section> <?php // end article section ?>
 
-								<footer class="article-footer cf">
+								<?php if ($footerImage = get_field('pag_footer_image')) : ?>
+                                    <footer class="article-footer cf" style="background-image: url('<?php echo $footerImage['sizes']['full-width']; ?>')">
 
-								</footer>
+                                    </footer>
+								<?php endif; ?>
 
-								<?php comments_template(); ?>
+                                <?php // comments_template(); ?>
 
 							</article>
 
