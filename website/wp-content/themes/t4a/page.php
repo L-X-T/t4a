@@ -40,7 +40,9 @@
 
 								<?php if ($footerImage = get_field('pag_footer_image')) : ?>
                                     <footer class="article-footer cf" style="background-image: url('<?php echo $footerImage['sizes']['full-width']; ?>')">
-
+	                                    <?php if (is_front_page()) : ?>
+                                            <div id="logo-footer"><a href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php the_field('opt_logo_header', 'options'); ?>" alt="Time4Africa"></a></div>
+	                                    <?php endif; ?>
                                     </footer>
 								<?php endif; ?>
 

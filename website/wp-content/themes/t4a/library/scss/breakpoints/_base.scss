@@ -274,7 +274,7 @@ and more scalable.
 LOGO HEADER
 *********************/
 
-#logo-header {
+#logo-header, #logo-footer {
 	position: absolute;
 	display: block;
 	z-index: 10;
@@ -297,6 +297,12 @@ LOGO HEADER
 	}
 }
 
+#logo-footer {
+	.home & {
+		position: absolute;
+		bottom: 1em;
+	}
+}
 
 /*********************
 POSTS & CONTENT STYLES
@@ -307,14 +313,11 @@ POSTS & CONTENT STYLES
 }
 
 		.hentry {
-			background-color: $white;
-			border-radius: 3px;
-			margin-bottom: 1.5em;
-
 			header {
 			}
 
 			footer {
+				position: relative;
 				height: 300px;
 				background-size: cover;
 				background-position: center center;
@@ -906,8 +909,7 @@ FOOTER STYLES
 
 .footer {
 	clear: both;
-	background-color: $black;
-	color: $light-gray;
+	color: black;
 }
 
 	/*
@@ -919,11 +921,18 @@ FOOTER STYLES
 	override these styles for the desktop
 	view.
 	*/
-	.footer-links {
+	.footer-links, .footer-mitte {
+		.menu-title {
+			@extend %caption-font;
+		}
 
 		ul {
 
-			li {}
+			li {
+				a {
+					color: black;
+				}
+			}
 
 		}
 
