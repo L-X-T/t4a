@@ -89,9 +89,7 @@ NAVIGATION STYLES
 			margin-top: 0;
 			border: 1px solid #ccc;
 			border-top: 0;
-			position: absolute;
-			visibility: hidden;
-			z-index: 8999;
+			display:none;
 
 			li {
 
@@ -300,4 +298,3 @@ mobile. Make sure to double check these!
 		}
 	}
 } /* end .footer-links */
-
