@@ -316,4 +316,9 @@ function product_col_style( $classes ) {
 }
 
 
+// let editors edit the menu
+$role = get_role( 'editor' );
+$role->add_cap( 'edit_theme_options' );
+
+
 /* DON'T DELETE THIS CLOSING TAG */ ?>
