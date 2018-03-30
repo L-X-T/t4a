@@ -93,22 +93,30 @@ function loadGravatars() {
  * Menu toggles
  */
 function openOffcanvasNav() {
+    document.documentElement.style.overflow = "hidden";
+    document.documentElement.style.height = "100%";
+    document.body.style.overflow = "hidden";
+    document.body.style.height = "100%";
     document.getElementById("responsive-header").style.width = "250px";
+    document.getElementById("container").classList.add("offcanvas-expanded");
+    // jQuery('#container').addClass('offcanvas-expanded');
     document.getElementById("container").style.left = "250px";
     document.getElementById("content").style.opacity = "0.5";
     document.getElementById("footer").style.opacity = "0.5";
-    jQuery('#container').addClass('offcanvas-expanded');
 }
 
 function closeOffcanvasNav() {
+    document.documentElement.style.overflow = "scroll";
+    document.documentElement.style.height = "auto";
+    document.body.style.overflow = "scroll";
+    document.body.style.height = "auto";
     document.getElementById("responsive-header").style.width = "0";
+    document.getElementById("container").classList.remove("offcanvas-expanded");
+    // jQuery('#container').removeClass('offcanvas-expanded');
     document.getElementById("container").style.left= "0";
     document.getElementById("content").style.opacity = "1";
     document.getElementById("footer").style.opacity = "1";
-    jQuery('#container').removeClass('offcanvas-expanded');
 }
-
-
 
 /*
  * Put all your regular jQuery in here.
@@ -125,7 +133,7 @@ function closeOffcanvasNav() {
 
     }); /* end of as page load scripts */
 
-    // close offcanvas
+    // toggle offcanvas
     $('#offcanvas-toggle').click(function(e) {
         $this = $(this);
         if ($this.hasClass('opened')) {
@@ -140,7 +148,7 @@ function closeOffcanvasNav() {
     $('#container').click(function(e) {
         if ((e.target != $('.offcanvas')[0]) && (e.target != $('#offcanvas-toggle')[0])
             && (e.target != $('.offcanvas-hamburger')[0]) && (e.target != $('.offcanvas-toggle-label')[0])
-            && ($('#container').hasClass('offcanvas-expanded'))) {
+            && (e.target != '<span></span>') && ($('#container').hasClass('offcanvas-expanded'))) {
 
             var liTags = $($('.offcanvas')[0]).find('li');
             var aTags = $($('.offcanvas')[0]).find('a');
@@ -153,6 +161,11 @@ function closeOffcanvasNav() {
             // container was clicked so close
             $('#offcanvas-toggle').click();
         }
+    });
+
+    $('li.menu-toggle a').click(function(e) {
+        $this = $(this);
+        $this.parent().toggleClass('toggled');
     });
 
 })(jQuery);

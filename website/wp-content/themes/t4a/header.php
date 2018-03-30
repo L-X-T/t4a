@@ -79,7 +79,7 @@
 
                 <div id="responsive-header" class="offcanvas cf">
 
-                    <nav class="t4a-responsive-menu" role="navigation">
+                    <nav class="t4a-responsive-menu t4a-main-menu" role="navigation">
                         <?php wp_nav_menu(array(
 							'container' => false,                           // remove nav container
 							'container_class' => 'menu cf',                 // class of container (should you choose to use it)
@@ -93,6 +93,9 @@
 							'depth' => 0,                                   // limit the depth of the nav
 							'fallback_cb' => ''                             // fallback function (if there is one)
 						)); ?>
+                    </nav>
+
+                    <nav class="t4a-newsletter-link" role="navigation">
                         <a href="#">Newsletter Signup</a>
                     </nav>
 
