@@ -160,6 +160,13 @@ function closeOffcanvasNav() {
     $('li.menu-toggle a').click(function(e) {
         $this = $(this);
         $this.parent().toggleClass('toggled');
+        return false;
+    });
+
+    $('.t4a-newsletter-link a').click(function(e) {
+        $('html, body').animate({ scrollTop: $(document).height() }, '500');
+        $('input[name=frm_email]').focus();
+        return false;
     });
 
 })(jQuery);
