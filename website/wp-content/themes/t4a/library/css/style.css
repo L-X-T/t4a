@@ -1499,6 +1499,11 @@ Stylesheet: WooCommerce Styles
   width: 100%;
 }
 
+/* line 21, ../scss/modules/_products.scss */
+.woocommerce .add_to_cart_button.ajax_add_to_cart {
+  display: none;
+}
+
 /*********************
 BASE (MOBILE) SIZE
 This are the mobile styles. It's what people see on their phones. If
@@ -2427,63 +2432,49 @@ COMMENT FORM STYLES
 }
 
 /*********************
-SIDEBARS & ASIDES
-*********************/
-/* line 1128, ../scss/breakpoints/_base.scss */
-.widget ul li {
-  /* deep nesting */
-}
-
-/* line 1145, ../scss/breakpoints/_base.scss */
-.no-widgets {
-  background-color: #fff;
-  padding: 1.5em;
-  text-align: center;
-  border: 1px solid #ccc;
-  border-radius: 2px;
-  margin-bottom: 1.5em;
-}
-
-/*********************
 FOOTER STYLES
 *********************/
-/* line 1158, ../scss/breakpoints/_base.scss */
+/* line 1121, ../scss/breakpoints/_base.scss */
 .footer {
   clear: both;
   color: black;
 }
-/* line 1162, ../scss/breakpoints/_base.scss */
+/* line 1125, ../scss/breakpoints/_base.scss */
 .footer #inner-footer {
   padding-top: 65px;
   padding-bottom: 65px;
   text-align: center;
 }
-/* line 1167, ../scss/breakpoints/_base.scss */
+/* line 1130, ../scss/breakpoints/_base.scss */
 .footer #inner-footer .menu-title {
   padding: 0.4em;
 }
+/* line 1137, ../scss/breakpoints/_base.scss */
+.footer form label {
+  padding: 0 0.5em;
+}
 
-/* line 1180, ../scss/breakpoints/_base.scss */
+/* line 1148, ../scss/breakpoints/_base.scss */
 .footer-links ul li a, .footer-mitte ul li a {
   color: black;
 }
 
 /* end .footer-links */
-/* line 1189, ../scss/breakpoints/_base.scss */
+/* line 1157, ../scss/breakpoints/_base.scss */
 .social-icons {
   width: auto;
   display: table;
   margin: 0 auto;
 }
-/* line 1194, ../scss/breakpoints/_base.scss */
+/* line 1162, ../scss/breakpoints/_base.scss */
 .social-icons li {
   display: inline;
 }
-/* line 1196, ../scss/breakpoints/_base.scss */
+/* line 1164, ../scss/breakpoints/_base.scss */
 .social-icons li a {
   color: black;
 }
-/* line 1199, ../scss/breakpoints/_base.scss */
+/* line 1167, ../scss/breakpoints/_base.scss */
 .social-icons li a img {
   max-width: 35px;
   padding: 5px;
@@ -2636,31 +2627,43 @@ you can add resource intensive styles.
     left: 2em;
   }
   /* line 45, ../scss/breakpoints/_768up.scss */
+  .home .header .t4a-main-menu a {
+    color: #fff;
+  }
+  /* line 48, ../scss/breakpoints/_768up.scss */
+  .home .header .t4a-main-menu a:hover, .home .header .t4a-main-menu a:focus {
+    color: #f7ce80;
+  }
+  /* line 53, ../scss/breakpoints/_768up.scss */
   .elementor-editor-active .header .t4a-main-menu {
     position: absolute;
     z-index: -1;
   }
-  /* line 51, ../scss/breakpoints/_768up.scss */
+  /* line 59, ../scss/breakpoints/_768up.scss */
   .header .t4a-newsletter-link {
     position: fixed;
     z-index: 100;
     right: 2em;
     top: 2em;
   }
-  /* line 57, ../scss/breakpoints/_768up.scss */
+  /* line 65, ../scss/breakpoints/_768up.scss */
   .home .header .t4a-newsletter-link a {
     color: #fff;
   }
-  /* line 61, ../scss/breakpoints/_768up.scss */
+  /* line 68, ../scss/breakpoints/_768up.scss */
+  .home .header .t4a-newsletter-link a:hover, .home .header .t4a-newsletter-link a:focus {
+    color: #f7ce80;
+  }
+  /* line 73, ../scss/breakpoints/_768up.scss */
   .elementor-editor-active .header .t4a-newsletter-link {
     position: absolute;
     z-index: -1;
   }
-  /* line 67, ../scss/breakpoints/_768up.scss */
+  /* line 79, ../scss/breakpoints/_768up.scss */
   .header #responsive-header {
     display: none;
   }
-  /* line 71, ../scss/breakpoints/_768up.scss */
+  /* line 83, ../scss/breakpoints/_768up.scss */
   .header #offcanvas-toggle {
     display: none;
   }
@@ -2668,7 +2671,7 @@ you can add resource intensive styles.
   /*********************
   LOGO HEADER
   *********************/
-  /* line 81, ../scss/breakpoints/_768up.scss */
+  /* line 93, ../scss/breakpoints/_768up.scss */
   .home #logo-header {
     margin-top: 30vh;
   }
@@ -2676,17 +2679,13 @@ you can add resource intensive styles.
   /*********************
   NAVIGATION STYLES
   *********************/
-  /* line 90, ../scss/breakpoints/_768up.scss */
+  /* line 102, ../scss/breakpoints/_768up.scss */
   .nav {
     /* end .menu ul li */
     /* highlight current page */
     /* end current highlighters */
   }
-  /* line 93, ../scss/breakpoints/_768up.scss */
-  .home .nav li a {
-    color: #fff;
-  }
-  /* line 97, ../scss/breakpoints/_768up.scss */
+  /* line 105, ../scss/breakpoints/_768up.scss */
   .nav li a:hover, .nav li a:focus {
     color: #f7ce80;
     text-decoration: none;
@@ -2696,28 +2695,28 @@ you can add resource intensive styles.
   /*********************
   SIDEBARS & ASIDES
   *********************/
-  /* line 146, ../scss/breakpoints/_768up.scss */
+  /* line 154, ../scss/breakpoints/_768up.scss */
   .sidebar {
     margin-top: 2.2em;
   }
 
-  /* line 150, ../scss/breakpoints/_768up.scss */
+  /* line 158, ../scss/breakpoints/_768up.scss */
   .widgettitle {
     border-bottom: 2px solid #444;
     margin-bottom: 0.75em;
   }
 
-  /* line 155, ../scss/breakpoints/_768up.scss */
+  /* line 163, ../scss/breakpoints/_768up.scss */
   .widget {
     padding: 0 10px;
     margin: 2.2em 0;
   }
-  /* line 160, ../scss/breakpoints/_768up.scss */
+  /* line 168, ../scss/breakpoints/_768up.scss */
   .widget ul li {
     margin-bottom: 0.75em;
     /* deep nesting */
   }
-  /* line 168, ../scss/breakpoints/_768up.scss */
+  /* line 176, ../scss/breakpoints/_768up.scss */
   .widget ul li ul {
     margin-top: 0.75em;
     padding-left: 1em;
@@ -2742,7 +2741,7 @@ you can add resource intensive styles.
   of overriding here if you styled them for
   mobile. Make sure to double check these!
   */
-  /* line 276, ../scss/breakpoints/_768up.scss */
+  /* line 284, ../scss/breakpoints/_768up.scss */
   .footer-links ul li {
     /*
     be careful with the depth of your menus.

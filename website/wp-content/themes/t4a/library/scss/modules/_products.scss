@@ -17,3 +17,7 @@ Stylesheet: WooCommerce Styles
     width: 100%;
   }
 }
+
+.woocommerce .add_to_cart_button.ajax_add_to_cart {
+  display: none;
+}

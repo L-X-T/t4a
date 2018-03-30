@@ -42,6 +42,14 @@ HEADER STYLES
 		top: 2em;
 		left: 2em;
 
+		.home & a {
+			color: $white;
+
+			&:hover, &:focus {
+				color: $t4a-gold;
+			}
+		}
+
 		.elementor-editor-active & {
 			position: absolute;
 			z-index: -1;
@@ -56,6 +64,10 @@ HEADER STYLES
 
 		.home & a {
 			color: $white;
+
+			&:hover, &:focus {
+				color: $t4a-gold;
+			}
 		}
 
 		.elementor-editor-active & {
@@ -90,10 +102,6 @@ NAVIGATION STYLES
 .nav {
 	li {
 		a {
-			.home & {
-				color: $white;
-			}
-
 			&:hover, &:focus {
 				color: $t4a-gold;
 				text-decoration: none;

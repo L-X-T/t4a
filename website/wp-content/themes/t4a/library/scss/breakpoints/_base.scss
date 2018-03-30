@@ -1113,43 +1113,6 @@ COMMENT FORM STYLES
 		margin: 0 20px 1.1em;
 	}
 
-/*********************
-SIDEBARS & ASIDES
-*********************/
-
-.sidebar {}
-
-	.widgettitle {}
-
-	.widget {
-
-		ul {
-
-			li {
-
-				&:first-child {}
-
-				&:last-child {}
-
-				a {}
-
-				/* deep nesting */
-				ul {}
-
-			}
-
-		}
-
-	}
-
-	.no-widgets {
-		background-color: $white;
-		padding: 1.5em;
-		text-align: center;
-		border: 1px solid $border-color;
-		border-radius: 2px;
-		margin-bottom: 1.5em;
-	}
 
 /*********************
 FOOTER STYLES
@@ -1170,6 +1133,11 @@ FOOTER STYLES
 		}
 	}
 
+	form {
+		label {
+			padding: 0 0.5em;
+		}
+	}
 }
 
 	.footer-links, .footer-mitte {
@@ -1205,3 +1173,5 @@ FOOTER STYLES
 	}
 
 	.copyright {}
+
+
