@@ -192,7 +192,6 @@ HEADER STYLES
 		display: block;
 		padding: 0.4em;
 		padding-left: 2em;
-		color: $black;
 		text-decoration: none;
 		text-transform: uppercase;
 
@@ -327,10 +326,6 @@ and more scalable.
 			keep this file as small as possible!
 			*/
 
-			.home & {
-				color: $white;
-			}
-
 			&:hover, &:focus {
 				color: $t4a-gold;
 			}
@@ -349,7 +344,8 @@ and more scalable.
 		*/
 		ul.sub-menu,
 		ul.children {
-			display:none;
+			display: none;
+			margin: 0.5em 0 1em;
 
 			li {
 
@@ -376,13 +372,17 @@ and more scalable.
 		}
 
 		/* showing sub-menus */
-		&.opened > ul {
-			display:block;
+		&.toggled > ul {
+			display: block;
 		}
 	} /* end .menu li */
 
-	li.current_page_ancestor ul.sub-menu {
-		display:block;
+	li.current_page_ancestor ul.sub-menu, li.current-menu-parent ul.sub-menu {
+		display: block;
+	}
+
+	li.current-menu-parent.toggled ul.sub-menu {
+		display: none;
 	}
 
 	/* highlight current page */
@@ -402,7 +402,19 @@ and more scalable.
 } /* end .nav */
 
 .t4a-newsletter-link {
-	white-space: nowrap;
+	a {
+		display: inline-block;
+		padding: 0.4em;
+		color: $black;
+		text-decoration: none;
+		text-transform: uppercase;
+		white-space: nowrap;
+
+		&:hover, &:focus {
+			color: $t4a-gold;
+			text-decoration: none;
+		}
+	}
 }
 
 

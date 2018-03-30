@@ -157,7 +157,7 @@ function closeOffcanvasNav() {
 
     $('li.menu-toggle a').click(function(e) {
         $this = $(this);
-        $this.parent().toggleClass('opened');
+        $this.parent().toggleClass('toggled');
     });
 
 })(jQuery);
