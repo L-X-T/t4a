@@ -160,6 +160,11 @@ HEADER STYLES
 		z-index: 100;
 		top: 2em;
 		left: 2em;
+
+		.elementor-editor-active & {
+			position: absolute;
+			z-index: -1;
+		}
 	}
 
 	.t4a-newsletter-link {
@@ -167,9 +172,10 @@ HEADER STYLES
 		z-index: 100;
 		right: 2em;
 		top: 2em;
-		padding: 0.75em;
 
 		a {
+			display: inline-block;
+			padding: 0.4em;
 			color: $black;
 			text-decoration: none;
 			text-transform: uppercase;
@@ -177,6 +183,11 @@ HEADER STYLES
 			.home & {
 				color: $white;
 			}
+		}
+
+		.elementor-editor-active & {
+			position: absolute;
+			z-index: -1;
 		}
 	}
 }
