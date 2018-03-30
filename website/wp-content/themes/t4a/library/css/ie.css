@@ -430,12 +430,7 @@ be seen on the Desktop.
 /*********************
 LOGO HEADER
 *********************/
-/* line 22, ../scss/breakpoints/_1030up.scss */
-.home #logo-header {
-  /*margin-top: 40vh;*/
-}
-
-/* line 27, ../scss/breakpoints/_1030up.scss */
+/* line 21, ../scss/breakpoints/_1030up.scss */
 .hentry footer {
   height: 500px;
 }
