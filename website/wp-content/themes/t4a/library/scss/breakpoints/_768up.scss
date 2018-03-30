@@ -32,13 +32,57 @@ HEADER STYLES
 *********************/
 
 .header {
+	#fixed-header {
+		display: block;
+	}
+
+	.t4a-main-menu {
+		position: fixed;
+		z-index: 100;
+		top: 2em;
+		left: 2em;
+
+		.elementor-editor-active & {
+			position: absolute;
+			z-index: -1;
+		}
+	}
+
 	.t4a-newsletter-link {
+		position: fixed;
+		z-index: 100;
+		right: 2em;
+		top: 2em;
+
 		a {
+			display: inline-block;
+			padding: 0.4em;
+			color: $black;
+			text-decoration: none;
+			text-transform: uppercase;
+
+			.home & {
+				color: $white;
+			}
+
 			&:hover, &:focus {
 				color: $t4a-gold;
 				text-decoration: none;
 			}
 		}
+
+		.elementor-editor-active & {
+			position: absolute;
+			z-index: -1;
+		}
+	}
+
+	#responsive-header {
+		display: none;
+	}
+
+	#offcanvas-toggle {
+		display: none;
 	}
 }
 

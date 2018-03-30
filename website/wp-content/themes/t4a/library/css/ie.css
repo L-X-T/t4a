@@ -278,16 +278,64 @@ LAYOUT & GRID STYLES
 /*********************
 HEADER STYLES
 *********************/
-/* line 37, ../scss/breakpoints/_768up.scss */
+/* line 35, ../scss/breakpoints/_768up.scss */
+.header #fixed-header {
+  display: block;
+}
+/* line 39, ../scss/breakpoints/_768up.scss */
+.header .t4a-main-menu {
+  position: fixed;
+  z-index: 100;
+  top: 2em;
+  left: 2em;
+}
+/* line 45, ../scss/breakpoints/_768up.scss */
+.elementor-editor-active .header .t4a-main-menu {
+  position: absolute;
+  z-index: -1;
+}
+/* line 51, ../scss/breakpoints/_768up.scss */
+.header .t4a-newsletter-link {
+  position: fixed;
+  z-index: 100;
+  right: 2em;
+  top: 2em;
+}
+/* line 57, ../scss/breakpoints/_768up.scss */
+.header .t4a-newsletter-link a {
+  display: inline-block;
+  padding: 0.4em;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+/* line 64, ../scss/breakpoints/_768up.scss */
+.home .header .t4a-newsletter-link a {
+  color: #fff;
+}
+/* line 68, ../scss/breakpoints/_768up.scss */
 .header .t4a-newsletter-link a:hover, .header .t4a-newsletter-link a:focus {
   color: #f7ce80;
   text-decoration: none;
+}
+/* line 74, ../scss/breakpoints/_768up.scss */
+.elementor-editor-active .header .t4a-newsletter-link {
+  position: absolute;
+  z-index: -1;
+}
+/* line 80, ../scss/breakpoints/_768up.scss */
+.header #responsive-header {
+  display: none;
+}
+/* line 84, ../scss/breakpoints/_768up.scss */
+.header #offcanvas-toggle {
+  display: none;
 }
 
 /*********************
 LOGO HEADER
 *********************/
-/* line 50, ../scss/breakpoints/_768up.scss */
+/* line 94, ../scss/breakpoints/_768up.scss */
 .home #logo-header {
   margin-top: 30vh;
 }
@@ -295,18 +343,18 @@ LOGO HEADER
 /*********************
 NAVIGATION STYLES
 *********************/
-/* line 59, ../scss/breakpoints/_768up.scss */
+/* line 103, ../scss/breakpoints/_768up.scss */
 .nav {
   border: 0;
   /* end .menu ul li */
   /* highlight current page */
   /* end current highlighters */
 }
-/* line 61, ../scss/breakpoints/_768up.scss */
+/* line 105, ../scss/breakpoints/_768up.scss */
 .nav ul {
   margin-top: 0;
 }
-/* line 64, ../scss/breakpoints/_768up.scss */
+/* line 108, ../scss/breakpoints/_768up.scss */
 .nav li {
   position: relative;
   /*
@@ -314,7 +362,7 @@ NAVIGATION STYLES
   */
   /* showing sub-menus */
 }
-/* line 67, ../scss/breakpoints/_768up.scss */
+/* line 111, ../scss/breakpoints/_768up.scss */
 .nav li a {
   border-bottom: 0;
   /*
@@ -322,19 +370,19 @@ NAVIGATION STYLES
   has the possibility of being a mobile device.
   */
 }
-/* line 74, ../scss/breakpoints/_768up.scss */
+/* line 118, ../scss/breakpoints/_768up.scss */
 .nav li a:hover, .nav li a:focus {
   color: #f7ce80;
   text-decoration: none;
 }
-/* line 86, ../scss/breakpoints/_768up.scss */
+/* line 130, ../scss/breakpoints/_768up.scss */
 .nav li ul.sub-menu,
 .nav li ul.children {
   margin-top: 0;
   display: none;
   /* highlight sub-menu current page */
 }
-/* line 91, ../scss/breakpoints/_768up.scss */
+/* line 135, ../scss/breakpoints/_768up.scss */
 .nav li ul.sub-menu li,
 .nav li ul.children li {
   /*
@@ -343,29 +391,29 @@ NAVIGATION STYLES
   for usability. k, bai.
   */
 }
-/* line 93, ../scss/breakpoints/_768up.scss */
+/* line 137, ../scss/breakpoints/_768up.scss */
 .nav li ul.sub-menu li a,
 .nav li ul.children li a {
   padding-left: 10px;
   border-right: 0;
   display: block;
 }
-/* line 108, ../scss/breakpoints/_768up.scss */
+/* line 152, ../scss/breakpoints/_768up.scss */
 .nav li ul.sub-menu li:last-child a,
 .nav li ul.children li:last-child a {
   border-bottom: 0;
 }
-/* line 118, ../scss/breakpoints/_768up.scss */
+/* line 162, ../scss/breakpoints/_768up.scss */
 .nav li ul.sub-menu li ul,
 .nav li ul.children li ul {
   top: 0;
   left: 100%;
 }
-/* line 133, ../scss/breakpoints/_768up.scss */
+/* line 177, ../scss/breakpoints/_768up.scss */
 .nav li:hover > ul {
   display: block;
 }
-/* line 139, ../scss/breakpoints/_768up.scss */
+/* line 183, ../scss/breakpoints/_768up.scss */
 .nav li.current_page_ancestor ul.sub-menu {
   display: block;
 }
@@ -374,28 +422,28 @@ NAVIGATION STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
-/* line 156, ../scss/breakpoints/_768up.scss */
+/* line 200, ../scss/breakpoints/_768up.scss */
 .sidebar {
   margin-top: 2.2em;
 }
 
-/* line 160, ../scss/breakpoints/_768up.scss */
+/* line 204, ../scss/breakpoints/_768up.scss */
 .widgettitle {
   border-bottom: 2px solid #444;
   margin-bottom: 0.75em;
 }
 
-/* line 165, ../scss/breakpoints/_768up.scss */
+/* line 209, ../scss/breakpoints/_768up.scss */
 .widget {
   padding: 0 10px;
   margin: 2.2em 0;
 }
-/* line 170, ../scss/breakpoints/_768up.scss */
+/* line 214, ../scss/breakpoints/_768up.scss */
 .widget ul li {
   margin-bottom: 0.75em;
   /* deep nesting */
 }
-/* line 178, ../scss/breakpoints/_768up.scss */
+/* line 222, ../scss/breakpoints/_768up.scss */
 .widget ul li ul {
   margin-top: 0.75em;
   padding-left: 1em;
@@ -420,7 +468,7 @@ you'll probably need to do quite a bit
 of overriding here if you styled them for
 mobile. Make sure to double check these!
 */
-/* line 286, ../scss/breakpoints/_768up.scss */
+/* line 330, ../scss/breakpoints/_768up.scss */
 .footer-links ul li {
   /*
   be careful with the depth of your menus.
