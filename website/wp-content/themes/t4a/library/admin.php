@@ -145,21 +145,23 @@ function bones_custom_admin_footer() {
 add_filter( 'admin_footer_text', 'bones_custom_admin_footer' );
 
 // add acf options
-acf_add_options_page( array(
-	/* (string) The title displayed on the options page. Required. */
-	'page_title' => 'Options',
+if (function_exists('acf_add_options_page')) {
+	acf_add_options_page( array(
+		/* (string) The title displayed on the options page. Required. */
+		'page_title' => 'Options',
 
-	/* (string) The title displayed in the wp-admin sidebar. Defaults to page_title */
-	'menu_title' => '',
+		/* (string) The title displayed in the wp-admin sidebar. Defaults to page_title */
+		'menu_title' => '',
 
-	/* (string) The slug name to refer to this menu by (should be unique for this menu).
-	Defaults to a url friendly version of menu_slug */
-	'menu_slug' => '',
+		/* (string) The slug name to refer to this menu by (should be unique for this menu).
+		Defaults to a url friendly version of menu_slug */
+		'menu_slug' => '',
 
-	/* (string) The capability required for this menu to be displayed to the user. Defaults to edit_posts.
-	Read more about capability here: http://codex.wordpress.org/Roles_and_Capabilities */
-	'capability' => 'edit_posts',
-) );
+		/* (string) The capability required for this menu to be displayed to the user. Defaults to edit_posts.
+		Read more about capability here: http://codex.wordpress.org/Roles_and_Capabilities */
+		'capability' => 'edit_posts',
+	) );
+}
 
 // add mime types
 function custom_upload_mimes ( $mimes=array() ) {

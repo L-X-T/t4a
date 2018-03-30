@@ -297,7 +297,6 @@ function disable_json_feed_emojicons() {
 	remove_filter('comment_text_rss', 'wp_staticize_emoji');
 
 	// filter to remove TinyMCE emojis
-	add_filter('tiny_mce_plugins', 'disable_emojicons_tinymce');
 	add_filter('emoji_svg_url', '__return_false');
 }
 
