@@ -59,7 +59,6 @@ NAVIGATION STYLES
 .nav {
 	border: 0;
 	ul {
-		background:$black;
 		margin-top:0;
 	}
 	li {
@@ -87,8 +86,6 @@ NAVIGATION STYLES
 		ul.sub-menu,
 		ul.children {
 			margin-top: 0;
-			border: 1px solid #ccc;
-			border-top: 0;
 			display:none;
 
 			li {
@@ -97,8 +94,6 @@ NAVIGATION STYLES
 					padding-left: 10px;
 					border-right: 0;
 					display: block;
-					width: 180px;
-					border-bottom: 1px solid #ccc;
 
 					&:hover,
 					&:focus {}
@@ -136,11 +131,14 @@ NAVIGATION STYLES
 
 		/* showing sub-menus */
 		&:hover > ul {
-			top: auto;
-			visibility:visible;
+			display:block;
 		}
 
 	} /* end .menu ul li */
+
+	li.current_page_ancestor ul.sub-menu {
+		display:block;
+	}
 
 	/* highlight current page */
 	li.current-menu-item,

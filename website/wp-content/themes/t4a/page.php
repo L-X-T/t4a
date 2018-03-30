@@ -9,9 +9,9 @@
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
-                                
+
                                 <div id="logo-header"><a href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php the_field('opt_logo_header', 'options'); ?>" alt="Time4Africa"></a></div>
-                                
+
 								<section class="entry-content cf" itemprop="articleBody">
 									<?php
 										// the content (pretty self explanatory huh)
@@ -41,7 +41,7 @@
 								<?php if ($footerImage = get_field('pag_footer_image')) : ?>
                                     <footer class="article-footer cf" style="background-image: url('<?php echo $footerImage['sizes']['full-width']; ?>')">
 	                                    <?php if (is_front_page()) : ?>
-                                            <div id="logo-footer"><a href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php the_field('opt_logo_header', 'options'); ?>" alt="Time4Africa"></a></div>
+                                            <div id="logo-footer"><img src="<?php the_field('opt_logo_header', 'options'); ?>" alt="Time4Africa"></div>
 	                                    <?php endif; ?>
                                     </footer>
 								<?php endif; ?>

@@ -42,24 +42,26 @@ textarea,
   height: 40px;
   line-height: 1em;
   padding: 0 12px;
+  margin: 5px auto;
   margin-bottom: 14px;
   font-size: 1em;
   color: $text-color;
-  border-radius: 3px;
+  border-radius: 0;
   vertical-align: middle;
+  text-align: center;
   box-shadow: none;
   border: 0;
   width: 100%;
-  max-width: 400px;
-  font-family: $lato;
-  background-color: $gray;
+  max-width: 250px;
+  font-family: $sans-serif;
+  background-color: $t4a-gold;
   @include transition(background-color 0.24s ease-in-out);
 
   // a focused input (or hovered on)
   &:focus,
   &:active {
     background-color: lighten($gray, 4%);
-    outline: none; 
+    outline: none;
   } // end hover or focus
 
   // error notification
@@ -124,5 +126,3 @@ select {
   background-repeat: no-repeat;
   background-position: 97.5% center;
 }
-
-

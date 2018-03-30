@@ -10,7 +10,8 @@ be seen on the Desktop.
 ******************************************************************/
 
 .wrap {
-  width: 1040px;
+  width: 100%;
+  max-width: 1200px;
 }
 
 /*********************
@@ -19,7 +20,7 @@ LOGO HEADER
 
 #logo-header {
   .home & {
-    margin-top: 40vh;
+    /*margin-top: 40vh;*/
   }
 }
 

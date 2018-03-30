@@ -17,7 +17,7 @@ GENERAL STYLES
 
 body {
 	font-family: $sans-serif;
-	font-size: 100%;
+	font-size: 13px;
 	line-height: 1.5;
 	color: $text-color;
 	-webkit-font-smoothing: antialiased;
@@ -108,7 +108,7 @@ H1, H2, H3, H4, H5 STYLES
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 	text-rendering: optimizelegibility;
-	font-weight: 500;
+	font-weight: normal;
 	/*
 	if you're going to use webfonts, be sure to check your weights
 	http://css-tricks.com/watch-your-font-weight/
@@ -152,28 +152,31 @@ HEADER STYLES
 *********************/
 
 .header {
-	position: fixed;
-	width: 100%;
-	z-index: 100;
-
-	font-size: 14px;
+	font-size: 1em;
 	font-weight: bold;
 
 	.t4a-main-menu {
-		margin-top: 2em;
-		margin-left: 2em;
+		position: fixed;
+		z-index: 100;
+		top: 2em;
+		left: 2em;
 	}
 
 	.t4a-newsletter-link {
-		position: absolute;
+		position: fixed;
+		z-index: 100;
 		right: 2em;
 		top: 2em;
 		padding: 0.75em;
 
 		a {
-			color: $white;
+			color: $black;
 			text-decoration: none;
 			text-transform: uppercase;
+
+			.home & {
+				color: $white;
+			}
 		}
 	}
 }
@@ -198,7 +201,7 @@ the navs on the site so our css is cleaner
 and more scalable.
 */
 
-.nav {
+.t4a-main-menu .nav {
 	display: inline-block;
 	border-bottom: 0;
 	margin: 0;
@@ -207,8 +210,8 @@ and more scalable.
 
 		a {
 			display: inline-block;
-			padding: 0.5em;
-			color: $white;
+			padding: 0.4em;
+			color: $black;
 			text-decoration: none;
 			text-transform: uppercase;
 
@@ -218,8 +221,13 @@ and more scalable.
 			the style.scss file where it's relevant. We want to
 			keep this file as small as possible!
 			*/
-			&:hover, &:focus {
 
+			.home & {
+				color: $white;
+			}
+
+			&:hover, &:focus {
+				color: $t4a-gold;
 			}
 		}
 
@@ -261,6 +269,69 @@ and more scalable.
 
 	/* highlight current page */
 	li.current-menu-item,
+	li.current_page_item {
+		a {
+			color: $t4a-gold;
+		}
+	}
+
+	li.current-page-parent > a {
+		color: $t4a-gold;
+	}
+
+	/* end current highlighters */
+
+} /* end .nav */
+
+.footer .nav {
+	display: inline-block;
+	border-bottom: 0;
+	margin: 0;
+
+	li {
+
+		a {
+			display: block;
+			padding: 0.4em;
+			color: $black;
+			text-decoration: none;
+			text-transform: uppercase;
+
+			&:hover, &:focus {
+				color: $t4a-gold;
+			}
+		}
+
+		&:first-child {}
+
+		&:last-child {}
+
+		ul.sub-menu,
+		ul.children {
+
+			li {
+
+				a {
+
+					&:hover,
+					&:focus {}
+
+					&:link {}
+
+				}
+
+				&:first-child {}
+
+				&:last-child {}
+
+			}
+
+		}
+
+	} /* end .menu li */
+
+	/* highlight current page */
+	li.current-menu-item,
 	li.current_page_item,
 	li.current_page_ancestor {
 
@@ -275,17 +346,13 @@ and more scalable.
 LOGO HEADER
 *********************/
 
-#logo-header, #logo-footer {
-	position: absolute;
-	display: block;
-	z-index: 10;
-
+#logo-header {
 	margin-top: 2em;
 	width: 100%;
 	text-align: center;
 
 	.home & {
-		margin-top: 20vh;
+		display: none;
 	}
 
 	a {
@@ -302,7 +369,24 @@ LOGO HEADER
 	.home & {
 		position: absolute;
 		bottom: 1em;
+		display: block;
 	}
+}
+
+/*********************
+HOME SLIDER STYLES
+*********************/
+
+#t4a-home-slider:after {
+	width:100%;
+	height: 100%;
+	background-image: url('/wp-content/uploads/2018/03/logo_time4africa.svg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	position: absolute;
+	z-index:99;
+	top: 0;
+	content: '';
 }
 
 /*********************
@@ -911,21 +995,21 @@ FOOTER STYLES
 .footer {
 	clear: both;
 	color: black;
-}
 
-	/*
-	if you checked out the link above:
-	http://www.alistapart.com/articles/organizing-mobile/
-	you'll want to style the footer nav
-	a bit more in-depth. Remember to keep
-	it simple because you'll have to
-	override these styles for the desktop
-	view.
-	*/
-	.footer-links, .footer-mitte {
+	#inner-footer {
+		padding-top: 65px;
+		padding-bottom: 65px;
+		text-align: center;
+
 		.menu-title {
 			@extend %caption-font;
+			padding: 0.4em;
 		}
+	}
+
+}
+
+	.footer-links, .footer-mitte {
 
 		ul {
 
@@ -939,5 +1023,22 @@ FOOTER STYLES
 
 	} /* end .footer-links */
 
+	.social-icons {
+		width: auto;
+		display: table;
+		margin: 0 auto;
+
+			li {
+				display: inline;
+				a {
+					color: black;
+
+					img {
+						max-width: 35px;
+						padding: 5px;
+					}
+				}
+			}
+	}
 
 	.copyright {}
