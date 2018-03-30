@@ -165,51 +165,53 @@ HEADER STYLES
 		display: none;
 	}
 
-	#responsive-header {
-		position: fixed; /* Stay in place */
-		height: 100%; /* 100% Full-height */
-		width: 0; /* 0 width - change this with JavaScript */
-		padding-top: 1em;
-		z-index: 1; /* Stay on top */
-		top: 0;
-		left: 0;
-		overflow-x: hidden; /* Disable horizontal scroll */
-
-		background-color: $white;
-		transition: $menu-transition; /* 0.5 second transition effect to slide in the sidenav */
-
-		a {
-			display: block;
-			padding: 0.4em;
-			color: $black;
-			text-decoration: none;
-			text-transform: uppercase;
-
-			.home & {
-				//color: $white;
-			}
-
-			&:hover, &:focus {
-				color: $t4a-gold;
-				text-decoration: none;
-			}
-		}
-
-		.closebtn {
-			position: absolute;
-			top: 0;
-			right: 25px;
-			font-size: 36px;
-			margin-left: 50px;
-		}
-	}
-
 	#logo {
 		margin: 0.75em 0;
 
 		a {
 			color: $white;
 		}
+	}
+}
+
+#responsive-header {
+	position: fixed; /* Stay in place */
+	height: 100%; /* 100% Full-height */
+	width: 0; /* 0 width - change this with JavaScript */
+	top: 0;
+	left: 0;
+
+	padding-top: 2em;
+	z-index: 1; /* Stay on top */
+	overflow-x: hidden; /* Disable horizontal scroll */
+
+	background-color: $white;
+	transition: $menu-transition; /* 0.5 second transition effect to slide in the sidenav */
+
+	a {
+		display: block;
+		padding: 0.4em;
+		padding-left: 2em;
+		color: $black;
+		text-decoration: none;
+		text-transform: uppercase;
+
+		.home & {
+			//color: $white;
+		}
+
+		&:hover, &:focus {
+			color: $t4a-gold;
+			text-decoration: none;
+		}
+	}
+
+	.closebtn {
+		position: absolute;
+		top: 0;
+		right: 25px;
+		font-size: 36px;
+		margin-left: 50px;
 	}
 }
 
@@ -228,11 +230,14 @@ HEADER STYLES
 	span {
 		display: block;
 		position: absolute;
+		left: 24px;
 		height: 4px;
 		width: 24px;
+		z-index: -1;
+
 		background: $black;
 		opacity: 1;
-		left: 24px;
+
 		-webkit-transform: rotate(0deg);
 		transform: rotate(0deg);
 		-webkit-transition: 0.3s ease-in-out;
@@ -303,8 +308,8 @@ and more scalable.
 
 .t4a-main-menu .nav {
 	display: inline-block;
-	border-bottom: 0;
 	margin: 0;
+	border: 0;
 
 	li {
 
@@ -344,11 +349,16 @@ and more scalable.
 		*/
 		ul.sub-menu,
 		ul.children {
+			display:none;
 
 			li {
 
 				a {
-					padding-left: 30px;
+					padding-left: 1em;
+
+					#responsive-header & {
+						padding-left: 3em;
+					}
 
 					&:hover,
 					&:focus {}
@@ -365,7 +375,15 @@ and more scalable.
 
 		}
 
+		/* showing sub-menus */
+		&.opened > ul {
+			display:block;
+		}
 	} /* end .menu li */
+
+	li.current_page_ancestor ul.sub-menu {
+		display:block;
+	}
 
 	/* highlight current page */
 	li.current-menu-item,
@@ -382,6 +400,11 @@ and more scalable.
 	/* end current highlighters */
 
 } /* end .nav */
+
+.t4a-newsletter-link {
+	white-space: nowrap;
+}
+
 
 .footer .nav {
 	display: inline-block;
@@ -758,7 +781,6 @@ PAGE NAVI STYLES
     a, span {
       margin: 0;
       text-decoration: none;
-      padding: 0;
       line-height: 1em;
       font-size: 1em;
       font-weight: normal;

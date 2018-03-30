@@ -345,105 +345,47 @@ NAVIGATION STYLES
 *********************/
 /* line 103, ../scss/breakpoints/_768up.scss */
 .nav {
-  border: 0;
   /* end .menu ul li */
   /* highlight current page */
   /* end current highlighters */
 }
-/* line 105, ../scss/breakpoints/_768up.scss */
-.nav ul {
-  margin-top: 0;
-}
-/* line 108, ../scss/breakpoints/_768up.scss */
-.nav li {
-  position: relative;
-  /*
-  plan your menus and drop-downs wisely.
-  */
-  /* showing sub-menus */
-}
-/* line 111, ../scss/breakpoints/_768up.scss */
-.nav li a {
-  border-bottom: 0;
-  /*
-  you can use hover styles here even though this size
-  has the possibility of being a mobile device.
-  */
-}
-/* line 118, ../scss/breakpoints/_768up.scss */
+/* line 106, ../scss/breakpoints/_768up.scss */
 .nav li a:hover, .nav li a:focus {
   color: #f7ce80;
   text-decoration: none;
 }
-/* line 130, ../scss/breakpoints/_768up.scss */
+/* line 115, ../scss/breakpoints/_768up.scss */
 .nav li ul.sub-menu,
 .nav li ul.children {
-  margin-top: 0;
-  display: none;
   /* highlight sub-menu current page */
-}
-/* line 135, ../scss/breakpoints/_768up.scss */
-.nav li ul.sub-menu li,
-.nav li ul.children li {
-  /*
-  if you need to go deeper, go nuts
-  just remember deeper menus suck
-  for usability. k, bai.
-  */
-}
-/* line 137, ../scss/breakpoints/_768up.scss */
-.nav li ul.sub-menu li a,
-.nav li ul.children li a {
-  padding-left: 10px;
-  border-right: 0;
-  display: block;
-}
-/* line 152, ../scss/breakpoints/_768up.scss */
-.nav li ul.sub-menu li:last-child a,
-.nav li ul.children li:last-child a {
-  border-bottom: 0;
-}
-/* line 162, ../scss/breakpoints/_768up.scss */
-.nav li ul.sub-menu li ul,
-.nav li ul.children li ul {
-  top: 0;
-  left: 100%;
-}
-/* line 177, ../scss/breakpoints/_768up.scss */
-.nav li:hover > ul {
-  display: block;
-}
-/* line 183, ../scss/breakpoints/_768up.scss */
-.nav li.current_page_ancestor ul.sub-menu {
-  display: block;
 }
 
 /* end .nav */
 /*********************
 SIDEBARS & ASIDES
 *********************/
-/* line 200, ../scss/breakpoints/_768up.scss */
+/* line 156, ../scss/breakpoints/_768up.scss */
 .sidebar {
   margin-top: 2.2em;
 }
 
-/* line 204, ../scss/breakpoints/_768up.scss */
+/* line 160, ../scss/breakpoints/_768up.scss */
 .widgettitle {
   border-bottom: 2px solid #444;
   margin-bottom: 0.75em;
 }
 
-/* line 209, ../scss/breakpoints/_768up.scss */
+/* line 165, ../scss/breakpoints/_768up.scss */
 .widget {
   padding: 0 10px;
   margin: 2.2em 0;
 }
-/* line 214, ../scss/breakpoints/_768up.scss */
+/* line 170, ../scss/breakpoints/_768up.scss */
 .widget ul li {
   margin-bottom: 0.75em;
   /* deep nesting */
 }
-/* line 222, ../scss/breakpoints/_768up.scss */
+/* line 178, ../scss/breakpoints/_768up.scss */
 .widget ul li ul {
   margin-top: 0.75em;
   padding-left: 1em;
@@ -468,7 +410,7 @@ you'll probably need to do quite a bit
 of overriding here if you styled them for
 mobile. Make sure to double check these!
 */
-/* line 330, ../scss/breakpoints/_768up.scss */
+/* line 286, ../scss/breakpoints/_768up.scss */
 .footer-links ul li {
   /*
   be careful with the depth of your menus.

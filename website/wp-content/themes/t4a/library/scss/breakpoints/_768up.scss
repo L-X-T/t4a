@@ -101,20 +101,8 @@ NAVIGATION STYLES
 *********************/
 
 .nav {
-	border: 0;
-	ul {
-		margin-top:0;
-	}
 	li {
-		position: relative;
-
 		a {
-			border-bottom: 0;
-
-			/*
-			you can use hover styles here even though this size
-			has the possibility of being a mobile device.
-			*/
 			&:hover, &:focus {
 				color: $t4a-gold;
 				text-decoration: none;
@@ -124,21 +112,10 @@ NAVIGATION STYLES
 		&:first-child {}
 		&:last-child {}
 
-		/*
-		plan your menus and drop-downs wisely.
-		*/
 		ul.sub-menu,
 		ul.children {
-			margin-top: 0;
-			display:none;
-
 			li {
-
 				a {
-					padding-left: 10px;
-					border-right: 0;
-					display: block;
-
 					&:hover,
 					&:focus {}
 
@@ -150,18 +127,7 @@ NAVIGATION STYLES
 				&:last-child {
 
 					a {
-						border-bottom: 0;
 					}
-				}
-
-				/*
-				if you need to go deeper, go nuts
-				just remember deeper menus suck
-				for usability. k, bai.
-				*/
-				ul {
-					top:0;
-					left:100%;
 				}
 			}
 
@@ -172,17 +138,7 @@ NAVIGATION STYLES
 				a {}
 			}
 		}
-
-		/* showing sub-menus */
-		&:hover > ul {
-			display:block;
-		}
-
 	} /* end .menu ul li */
-
-	li.current_page_ancestor ul.sub-menu {
-		display:block;
-	}
 
 	/* highlight current page */
 	li.current-menu-item,

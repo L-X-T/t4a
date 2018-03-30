@@ -125,7 +125,7 @@ function closeOffcanvasNav() {
 
     }); /* end of as page load scripts */
 
-    // close offcanvas
+    // toggle offcanvas
     $('#offcanvas-toggle').click(function(e) {
         $this = $(this);
         if ($this.hasClass('opened')) {
@@ -140,7 +140,7 @@ function closeOffcanvasNav() {
     $('#container').click(function(e) {
         if ((e.target != $('.offcanvas')[0]) && (e.target != $('#offcanvas-toggle')[0])
             && (e.target != $('.offcanvas-hamburger')[0]) && (e.target != $('.offcanvas-toggle-label')[0])
-            && ($('#container').hasClass('offcanvas-expanded'))) {
+            && (e.target != '<span></span>') && ($('#container').hasClass('offcanvas-expanded'))) {
 
             var liTags = $($('.offcanvas')[0]).find('li');
             var aTags = $($('.offcanvas')[0]).find('a');
@@ -153,6 +153,11 @@ function closeOffcanvasNav() {
             // container was clicked so close
             $('#offcanvas-toggle').click();
         }
+    });
+
+    $('li.menu-toggle a').click(function(e) {
+        $this = $(this);
+        $this.parent().toggleClass('opened');
     });
 
 })(jQuery);
