@@ -1,6 +1,6 @@
 /******************************************************************
-Site Name:
-Author:
+Site Name: time4africa
+Author: Ankerlos
 
 Stylesheet: WooCommerce Styles
 
@@ -18,6 +18,31 @@ Stylesheet: WooCommerce Styles
   }
 }
 
-.woocommerce .add_to_cart_button.ajax_add_to_cart {
+.woocommerce .products ul,
+.woocommerce ul.products {
+  margin: 2em 0;
+}
+
+.woocommerce ul.products li.product {
+
+  text-align: center;
+
+  a {
+    color: $black;
+  }
+
+  .woocommerce-loop-category__title,
+  .woocommerce-loop-product__title,
+  .h3 {
+    text-align: center;
+    display: inline-block;
+    border-bottom: 1px solid $black;
+    padding: 1px 0;
+    margin: 0.5em 0 2em 0;
+  }
+}
+
+.woocommerce .add_to_cart_button.ajax_add_to_cart,
+.woocommerce ul.products li.product .price {
   display: none;
 }
