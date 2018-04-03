@@ -2,7 +2,7 @@
 
 			<div id="content">
 
-				<div id="inner-content" class="<?php if (!is_front_page()) : ?>wrap <?php endif; ?>cf">
+				<div id="inner-content" class="cf">
 
 						<main id="main" class="m-all cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
@@ -12,7 +12,7 @@
 
                                 <div id="logo-header"><a href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php the_field('opt_logo_header', 'options'); ?>" alt="Time4Africa"></a></div>
 
-								<section class="entry-content cf" itemprop="articleBody">
+								<section class="entry-content cf <?php if (!is_front_page()) : ?>wrap <?php endif; ?>" itemprop="articleBody">
 									<?php
 										// the content (pretty self explanatory huh)
 										the_content();
@@ -46,7 +46,7 @@
                                     </footer>
 								<?php endif; ?>
 
-                                <?php // comments_template(); ?>
+								<?php // comments_template(); ?>
 
 							</article>
 
