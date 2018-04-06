@@ -42,7 +42,22 @@ Stylesheet: WooCommerce Styles
   }
 }
 
+.woocommerce #content div.product div.summary,
+.woocommerce div.product div.summary,
+.woocommerce-page #content div.product div.summary,
+.woocommerce-page div.product div.summary {
+  text-align: center;
+}
+
+/*******************
+   HIDDING THINGS
+*******************/
+
 .woocommerce .add_to_cart_button.ajax_add_to_cart,
-.woocommerce ul.products li.product .price {
+.woocommerce ul.products li.product .price,
+.woocommerce div.product p.price,
+.woocommerce div.product span.price,
+.woocommerce div.product form.cart,
+.product_meta {
   display: none;
 }

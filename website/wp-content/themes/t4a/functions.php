@@ -123,14 +123,14 @@ new image size.
 
 /************* THEME CUSTOMIZE *********************/
 
-/* 
+/*
   A good tutorial for creating your own Sections, Controls and Settings:
   http://code.tutsplus.com/series/a-guide-to-the-wordpress-theme-customizer--wp-33722
-  
+
   Good articles on modifying the default options:
   http://natko.com/changing-default-wordpress-theme-customization-api-sections/
   http://code.tutsplus.com/tutorials/digging-into-the-theme-customizer-components--wp-27162
-  
+
   To do:
   - Create a js for the postmessage transport method
   - Create some sanitize functions to sanitize inputs
@@ -140,7 +140,7 @@ new image size.
 function bones_theme_customizer($wp_customize) {
   // $wp_customize calls go here.
   //
-  // Uncomment the below lines to remove the default customize sections 
+  // Uncomment the below lines to remove the default customize sections
 
   // $wp_customize->remove_section('title_tagline');
   // $wp_customize->remove_section('colors');
@@ -150,7 +150,7 @@ function bones_theme_customizer($wp_customize) {
 
   // Uncomment the below lines to remove the default controls
   // $wp_customize->remove_control('blogdescription');
-  
+
   // Uncomment the following to change the default section titles
   // $wp_customize->get_section('colors')->title = __( 'Theme Colors' );
   // $wp_customize->get_section('background_image')->title = __( 'Images' );
@@ -273,6 +273,14 @@ function theme_support() {
 	add_theme_support('woocommerce');
 }
 
+add_filter('woocommerce_currency_symbol', 'change_existing_currency_symbol', 10, 2);
+
+function change_existing_currency_symbol( $currency_symbol, $currency ) {
+     switch( $currency ) {
+          case 'EUR': $currency_symbol = 'EURO'; break;
+     }
+     return $currency_symbol;
+}
 
 // disable stupid stuff
 add_action( 'init', 'disable_json_feed_emojicons' );

@@ -22,8 +22,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
-<table class="shop_attributes">
-	<?php if ( $display_dimensions && $product->has_weight() ) : ?>
+<div class="shop_attributes">
+	<?php /*
+  if ( $display_dimensions && $product->has_weight() ) : ?>
 		<tr>
 			<th><?php _e( 'Weight', 'woocommerce' ) ?></th>
 			<td class="product_weight"><?php echo esc_html( wc_format_weight( $product->get_weight() ) ); ?></td>
@@ -35,12 +36,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<th><?php _e( 'Dimensions', 'woocommerce' ) ?></th>
 			<td class="product_dimensions"><?php echo esc_html( wc_format_dimensions( $product->get_dimensions( false ) ) ); ?></td>
 		</tr>
-	<?php endif; ?>
+	<?php endif;
+  */ ?>
 
 	<?php foreach ( $attributes as $attribute ) : ?>
-		<tr>
-			<?php /* <th><?php echo wc_attribute_label( $attribute->get_name() ); ?></th> */ ?>
-			<td><?php
+		<p>
+			<?php
 				$values = array();
 
 				if ( $attribute->is_taxonomy() ) {
@@ -65,19 +66,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 				}
 
 				echo apply_filters( 'woocommerce_attribute', wpautop( wptexturize( implode( ', ', $values ) ) ), $attribute, $values );
-			?></td>
-		</tr>
+			?>
+		</p>
 	<?php endforeach; ?>
 
 	<?php global $product; /* price row */ ?>
 
-    <tr>
-        <td>
-            <?php echo $product->get_price_html(); ?>
-        </td>
-    </tr>
+    <p class="t4a-master-price">
+      <?php if( get_field('alternative_price') ): ?>
+          <?php the_field('alternative_price'); ?>
+      <?php else : ?>
+          <?php echo $product->get_price_html(); ?>
+      <?php endif; ?>
+    </p>
 
-</table>
+</div>
 
 
 <?php /* info box */ ?>

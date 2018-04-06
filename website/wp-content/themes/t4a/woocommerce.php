@@ -7,9 +7,13 @@
 						<main id="main" class="m-all cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
-                                
-                                <div class="logo"><a href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php the_field('opt_logo_header', 'options'); ?>" alt="Time4Africa"></a></div>
-                                
+
+                <div id="logo-header" class="logo">
+									<a href="<?php echo home_url(); ?>" rel="nofollow">
+										<img src="<?php the_field('opt_logo_header', 'options'); ?>" alt="Time4Africa">
+									</a>
+								</div>
+
 								<section class="entry-content cf" itemprop="articleBody">
 									<?php
 										// the content (pretty self explanatory huh)

@@ -1525,8 +1525,23 @@ Stylesheet: WooCommerce Styles
 }
 
 /* line 45, ../scss/modules/_products.scss */
+.woocommerce #content div.product div.summary,
+.woocommerce div.product div.summary,
+.woocommerce-page #content div.product div.summary,
+.woocommerce-page div.product div.summary {
+  text-align: center;
+}
+
+/*******************
+   HIDDING THINGS
+*******************/
+/* line 56, ../scss/modules/_products.scss */
 .woocommerce .add_to_cart_button.ajax_add_to_cart,
-.woocommerce ul.products li.product .price {
+.woocommerce ul.products li.product .price,
+.woocommerce div.product p.price,
+.woocommerce div.product span.price,
+.woocommerce div.product form.cart,
+.product_meta {
   display: none;
 }
 

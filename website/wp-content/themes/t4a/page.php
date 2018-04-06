@@ -39,11 +39,11 @@
 								</section> <?php // end article section ?>
 
 								<?php if ($footerImage = get_field('pag_footer_image')) : ?>
-                                    <footer class="article-footer cf" style="background-image: url('<?php echo $footerImage['sizes']['full-width']; ?>')">
-	                                    <?php if (is_front_page()) : ?>
-                                            <div id="logo-footer"><img src="<?php the_field('opt_logo_header', 'options'); ?>" alt="Time4Africa"></div>
-	                                    <?php endif; ?>
-                                    </footer>
+                    <footer class="article-footer cf" style="background-image: url('<?php echo $footerImage['sizes']['full-width']; ?>')">
+	                    <?php if (is_front_page()) : ?>
+                      	<div id="logo-footer"><img src="<?php the_field('opt_logo_header', 'options'); ?>" alt="Time4Africa"></div>
+	                    <?php endif; ?>
+                    </footer>
 								<?php endif; ?>
 
 								<?php // comments_template(); ?>
