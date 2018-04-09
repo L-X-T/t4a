@@ -404,7 +404,9 @@ and more scalable.
 		}
 	} /* end .menu li */
 
-	li.current_page_ancestor ul.sub-menu, li.current-menu-parent ul.sub-menu {
+	li.current_page_ancestor ul.sub-menu,
+	li.current-menu-parent ul.sub-menu,
+	li.current_page_item ul.sub-menu {
 		display: block;
 	}
 
