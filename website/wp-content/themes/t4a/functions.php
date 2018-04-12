@@ -273,6 +273,7 @@ function theme_support() {
 	add_theme_support('woocommerce');
 }
 
+/*
 add_filter('woocommerce_currency_symbol', 'change_existing_currency_symbol', 10, 2);
 
 function change_existing_currency_symbol( $currency_symbol, $currency ) {
@@ -281,6 +282,7 @@ function change_existing_currency_symbol( $currency_symbol, $currency ) {
      }
      return $currency_symbol;
 }
+*/
 
 // disable stupid stuff
 add_action( 'init', 'disable_json_feed_emojicons' );

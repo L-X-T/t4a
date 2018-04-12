@@ -1,6 +1,6 @@
 /******************************************************************
-Site Name:
-Author:
+Site Name: time4africa
+Author: Ankerlos
 
 Stylesheet: Elementor Styles
 
@@ -12,4 +12,12 @@ Stylesheet: Elementor Styles
 
 .elementor-column {
   min-height: 0;
+}
+
+.elementor-widget-heading .elementor-widget-container {
+  padding: 0 0 1em 0;
+}
+
+.elementor-widget-text-editor .elementor-widget-container {
+  padding: 0 15%;
 }

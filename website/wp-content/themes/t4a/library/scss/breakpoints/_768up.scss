@@ -39,8 +39,8 @@ HEADER STYLES
 	.t4a-main-menu {
 		position: fixed;
 		z-index: 100;
-		top: 2em;
-		left: 2em;
+		top: 3em;
+		left: 3em;
 
 		.home & a {
 			color: $white;
@@ -59,8 +59,8 @@ HEADER STYLES
 	.t4a-newsletter-link {
 		position: fixed;
 		z-index: 100;
-		right: 2em;
-		top: 2em;
+		right: 3em;
+		top: 3em;
 
 		.home & a {
 			color: $white;
@@ -269,6 +269,22 @@ SIDEBARS & ASIDES
 	.widget_text {}
 	.textwidget p {}
 
+/******************
+PRODUCTS
+******************/
+
+	.woocommerce #content div.product {
+	  div.summary {
+	  position: absolute;
+	  right: 0;
+	  top: 50%;
+	  transform: translateY(-50%);
+	  -webkit-transform: translateY(-50%);
+	  -moz-transform: translateY(-50%);
+	  -ms-transform: translateY(-50%);
+	  -o-transform: translateY(-50%);
+	  }
+	}
 
 /*********************
 FOOTER STYLES

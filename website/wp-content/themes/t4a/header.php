@@ -31,6 +31,36 @@
 
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
+		<!--
+		/**
+		 * @license
+		 * MyFonts Webfont Build ID 3554565, 2018-04-09T05:20:41-0400
+		 *
+		 * The fonts listed in this notice are subject to the End User License
+		 * Agreement(s) entered into by the website owner. All other parties are
+		 * explicitly restricted from using the Licensed Webfonts(s).
+		 *
+		 * You may obtain a valid license at the URLs below.
+		 *
+		 * Webfont: HelveticaNeueLTStd-Bd by Linotype
+		 * URL: https://www.myfonts.com/fonts/linotype/neue-helvetica/helvetica-75-bold/
+		 *
+		 * Webfont: HelveticaNeueLTStd-Md by Linotype
+		 * URL: https://www.myfonts.com/fonts/linotype/neue-helvetica/helvetica-65-medium/
+		 *
+		 *
+		 * License: https://www.myfonts.com/viewlicense?type=web&buildid=3554565
+		 * Licensed pageviews: 250,000
+		 * Webfonts copyright: Copyright &#x00A9; 1988, 1990, 1993, 2002 Adobe Systems
+		 * Incorporated.  All Rights Reserved. &#x00A9; 1981, 2002 Heidelberger Druckmaschinen
+		 * AG. All rights reserved.
+		 *
+		 * © 2018 MyFonts Inc
+		*/
+
+		-->
+		<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/library/css/MyFontsWebfontsKit.css">
+
 		<?php // wordpress head functions ?>
 		<?php wp_head(); ?>
 		<?php // end of wordpress head ?>

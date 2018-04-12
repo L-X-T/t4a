@@ -76,7 +76,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       <?php if( get_field('alternative_price') ): ?>
           <?php the_field('alternative_price'); ?>
       <?php else : ?>
-          <?php echo $product->get_price_html(); ?>
+          <?php echo $product->get_price_html(); ?> incl. 20% VAT
       <?php endif; ?>
     </p>
 
@@ -84,11 +84,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 <?php /* info box */ ?>
-
-<div class="product-info-box">
-    <?php the_field('info_box'); ?>
-</div>
-
+<?php if( get_field('info_box') ): ?>
+  <div class="product-info-box">
+      <?php the_field('info_box'); ?>
+  </div>
+<?php endif; ?>
 
 <?php /* social sharer */ ?>
 

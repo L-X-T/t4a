@@ -164,10 +164,9 @@ function closeOffcanvasNav() {
     });
 
     $('.t4a-newsletter-link a').click(function(e) {
-        $('html, body').animate({ scrollTop: $(document).height() }, '500');
+        $('html, body').animate({ scrollTop: $(document).height() }, '1000');
         $('input[name=frm_email]').focus();
         return false;
     });
 
 })(jQuery);
-

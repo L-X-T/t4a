@@ -40,8 +40,8 @@ use color variables properly:
 http://sachagreif.com/sass-color-variables/
 */
 /******************************************************************
-Site Name:
-Author:
+Site Name: time4africa
+Author: Ankerlos
 
 Stylesheet: Typography
 
@@ -58,24 +58,6 @@ http://alistapart.com/column/responsive-typography-is-a-physical-discipline
 /*********************
 FONT FACE (IN YOUR FACE)
 *********************/
-/*  To embed your own fonts, use this syntax
-  and place your fonts inside the
-  library/fonts folder. For more information
-  on embedding fonts, go to:
-  http://www.fontsquirrel.com/
-  Be sure to remove the comment brackets.
-*/
-/*  @font-face {
-      font-family: 'Font Name';
-      src: url('library/fonts/font-name.eot');
-      src: url('library/fonts/font-name.eot?#iefix') format('embedded-opentype'),
-             url('library/fonts/font-name.woff') format('woff'),
-             url('library/fonts/font-name.ttf') format('truetype'),
-             url('library/fonts/font-name.svg#font-name') format('svg');
-      font-weight: normal;
-      font-style: normal;
-  }
-*/
 /*
 The following is based of Typebase:
 https://github.com/devinhunt/typebase.css
@@ -89,7 +71,7 @@ I've edited it a bit, but it's a nice starting point.
 some nice typographical defaults
 more here: http://www.newnet-soft.com/blog/csstypography
 */
-/* line 65, ../scss/partials/_typography.scss */
+/* line 46, ../scss/partials/_typography.scss */
 p {
   -ms-word-wrap: break-word;
   word-break: break-word;
@@ -291,8 +273,8 @@ HEADER STYLES
 .header .t4a-main-menu {
   position: fixed;
   z-index: 100;
-  top: 2em;
-  left: 2em;
+  top: 3em;
+  left: 3em;
 }
 /* line 45, ../scss/breakpoints/_768up.scss */
 .home .header .t4a-main-menu a {
@@ -311,8 +293,8 @@ HEADER STYLES
 .header .t4a-newsletter-link {
   position: fixed;
   z-index: 100;
-  right: 2em;
-  top: 2em;
+  right: 3em;
+  top: 3em;
 }
 /* line 65, ../scss/breakpoints/_768up.scss */
 .home .header .t4a-newsletter-link a {
@@ -401,6 +383,21 @@ SIDEBARS & ASIDES
 /* recent-comments widget */
 /* search widget */
 /* text widget */
+/******************
+PRODUCTS
+******************/
+/* line 277, ../scss/breakpoints/_768up.scss */
+.woocommerce #content div.product div.summary {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
 /*********************
 FOOTER STYLES
 *********************/
@@ -409,7 +406,7 @@ you'll probably need to do quite a bit
 of overriding here if you styled them for
 mobile. Make sure to double check these!
 */
-/* line 284, ../scss/breakpoints/_768up.scss */
+/* line 300, ../scss/breakpoints/_768up.scss */
 .footer-links ul li {
   /*
   be careful with the depth of your menus.

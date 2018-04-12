@@ -6,18 +6,6 @@ Stylesheet: WooCommerce Styles
 
 ******************************************************************/
 
-.woocommerce #content div.product.style-1col {
-  div.images {
-    float: none;
-    width: 100%;
-  }
-
-  div.summary {
-    float: none;
-    width: 100%;
-  }
-}
-
 .woocommerce .products ul,
 .woocommerce ul.products {
   margin: 2em 0;
@@ -34,9 +22,11 @@ Stylesheet: WooCommerce Styles
   .woocommerce-loop-category__title,
   .woocommerce-loop-product__title,
   .h3 {
+    font-family: $t4a-font-medium;
     text-align: center;
     display: inline-block;
     border-bottom: 1px solid $black;
+    color: $black;
     padding: 1px 0;
     margin: 0.5em 0 3em 0;
   }
@@ -48,6 +38,83 @@ Stylesheet: WooCommerce Styles
 .woocommerce-page div.product div.summary {
   text-align: center;
 }
+
+/*******************
+   PRODUCT DETAIL
+*******************/
+
+.t4a-product-container {
+  width:100%;
+  height:100%;
+  position: relative;
+}
+
+.woocommerce #content div.product.style-1col {
+  div.images {
+    float: none;
+    width: 100%;
+    margin-bottom:3em;
+  }
+
+  div.summary {
+    float: none;
+    width: 100%;
+    padding: 0 15%;
+    position:relative;
+    transform: none;
+	  -webkit-transform: none;
+	  -moz-transform: none;
+	  -ms-transform: none;
+	  -o-transform: none;
+  }
+}
+
+
+.t4a-product-title {
+  text-aligin: center;
+  margin-bottom:1.5em;
+
+  .product_title {
+    display: inline-block;
+    color: $t4a-gold;
+    border-bottom: 3px solid $t4a-gold;
+    line-height: 1em;
+  }
+}
+
+.shop_attributes p {
+    padding: 0;
+    margin: 0!important;
+
+    &:last-child {
+      padding-bottom: 1.5em;
+    }
+}
+
+p.t4a-master-price {
+  font-family: $t4a-font-bold;
+}
+
+.product-info-box {
+  border: 2px solid $t4a-gold;
+  padding: 1.5em;
+  width: 80%;
+  max-width:320px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5em;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  & a {
+    text-decoration: none;
+  }
+  & p {
+    padding:0;
+    margin:0!important;
+  }
+}
+
 
 /*******************
    HIDDING THINGS

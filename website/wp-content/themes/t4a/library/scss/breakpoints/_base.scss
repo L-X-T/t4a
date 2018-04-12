@@ -1,6 +1,6 @@
 /******************************************************************
-Site Name:
-Author:
+Site Name: time4time4africa
+Author: Ankerlos
 
 Stylesheet: Base Mobile Stylesheet
 
@@ -10,6 +10,27 @@ possible. This is called at the top of the main stylsheet
 and will be used across all viewports.
 
 ******************************************************************/
+
+/*********************
+WEBFONTS
+*********************/
+
+.HelveticaNeueLTStd-Bd {
+	font-family: HelveticaNeueLTStd-Bd;
+	font-weight: normal;
+	font-style: normal;
+}
+.HelveticaNeueLTStd-Md {
+	font-family: HelveticaNeueLTStd-Md;
+	font-weight: normal;
+	font-style: normal;
+}
+
+strong {
+	font-family: HelveticaNeueLTStd-Bd;
+	font-weight: normal;
+	font-style: normal;
+}
 
 /*********************
 GENERAL STYLES
@@ -25,7 +46,7 @@ body {
 	overflow: auto;
 
 	font-family: $sans-serif;
-	font-size: 13px;
+	font-size: 14px;
 	line-height: 1.5;
 	color: $text-color;
 
@@ -136,6 +157,7 @@ H1, H2, H3, H4, H5 STYLES
 ******************************************************************/
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+	font-family: $t4a-font-bold;
 	text-rendering: optimizelegibility;
 	font-weight: normal;
 	/*
@@ -150,18 +172,21 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 }
 
 h1, .h1 {
-	font-size: 2.3em;
+	font-size: 2em;
 	line-height: 1.333em;
 	margin-bottom: 2em;
 	text-transform: uppercase;
+	letter-spacing: 0.2em;
 	color: $t4a-gold;
 }
 
 h2, .h2 {
 	font-size: 1.75em;
 	letter-spacing: 0.2em;
+	text-transform: uppercase;
 	line-height: 1.4em;
 	margin-bottom: 0.375em;
+	color: $t4a-gold;
 }
 
 h3, .h3 {
@@ -185,8 +210,8 @@ HEADER STYLES
 *********************/
 
 .header {
-	font-size: 1em;
-	font-weight: bold;
+	font-size: 0.8em;
+	font-family: $t4a-font-bold;
 
 	#fixed-header {
 		display: none;
@@ -332,6 +357,11 @@ the navs on the site so our css is cleaner
 and more scalable.
 */
 
+.nav {
+	letter-spacing: 0.2em;
+}
+
+
 .t4a-main-menu .nav {
 	display: inline-block;
 	margin: 0;
@@ -372,12 +402,12 @@ and more scalable.
 		ul.sub-menu,
 		ul.children {
 			display: none;
-			margin: 0.5em 0 1em;
+			margin: 0;
 
 			li {
 
 				a {
-					padding-left: 1em;
+					padding-left: 2em;
 
 					#responsive-header & {
 						padding-left: 3em;
@@ -438,6 +468,7 @@ and more scalable.
 		text-decoration: none;
 		text-transform: uppercase;
 		white-space: nowrap;
+		letter-spacing: 0.2em;
 
 		&:hover, &:focus {
 			color: $t4a-gold;
@@ -1129,6 +1160,8 @@ FOOTER STYLES
 .footer {
 	clear: both;
 	color: black;
+	font-size:0.8em;
+	font-family: $t4a-font-bold;
 
 	#inner-footer {
 		padding-top: 65px;
