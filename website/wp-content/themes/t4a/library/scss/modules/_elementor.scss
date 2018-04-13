@@ -21,3 +21,33 @@ Stylesheet: Elementor Styles
 .elementor-widget-text-editor .elementor-widget-container {
   padding: 0 15%;
 }
+
+/*****************
+CALL TO ACTION
+*****************/
+
+.t4a-element {
+  .elementor-cta__content {
+    padding:0;
+    color: $t4a-gold-light;
+    font-family: $t4a-font-bold;
+
+    .elementor-cta__image {
+      margin-bottom: 0;
+      font-size:0px;
+    }
+
+    .elementor-cta__title {
+      position:absolute;
+      color: $t4a-gold-light;
+    }
+
+    .elementor-cta__description {
+      position:absolute;
+      padding-top: 2.6em;
+      font-size: 1.3em;
+      letter-spacing: 0.2em;
+      color: $t4a-gold-light;
+    }
+  }
+}

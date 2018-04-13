@@ -651,9 +651,9 @@ body#tinymce.wp-editor p {
   -ms-word-wrap: break-word;
   word-break: break-word;
   word-wrap: break-word;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  hyphens: auto;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  hyphens: none;
   -webkit-hyphenate-before: 2;
   -webkit-hyphenate-after: 3;
   hyphenate-lines: 3;
@@ -665,13 +665,13 @@ body#tinymce.wp-editor p {
 }
 /* line 45, ../scss/editor-style.scss */
 body#tinymce.wp-editor a, body#tinymce.wp-editor a:visited {
-  color: #f7ce80;
+  color: #ca912b;
   /* on hover */
   /* on click */
 }
 /* line 49, ../scss/editor-style.scss */
 body#tinymce.wp-editor a:hover, body#tinymce.wp-editor a:focus, body#tinymce.wp-editor a:visited:hover, body#tinymce.wp-editor a:visited:focus {
-  color: #f4bd55;
+  color: #a47623;
 }
 /* line 58, ../scss/editor-style.scss */
 body#tinymce.wp-editor a:link, body#tinymce.wp-editor a:visited:link {

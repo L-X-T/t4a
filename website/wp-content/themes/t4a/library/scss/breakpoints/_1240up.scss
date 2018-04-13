@@ -1,6 +1,6 @@
 /******************************************************************
-Site Name: 
-Author: 
+Site Name:
+Author:
 
 Stylesheet: Super Large Monitor Stylesheet
 
@@ -11,4 +11,8 @@ on larger screens.
 
 .hentry footer {
   height: 600px;
+
+  	.home & {
+      height:800px;
+    }
 }

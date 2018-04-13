@@ -54,7 +54,7 @@ textarea,
   width: 100%;
   max-width: 250px;
   font-family: $sans-serif;
-  background-color: $t4a-gold;
+  background-color: $t4a-gold-light;
   @include transition(background-color 0.24s ease-in-out);
 
   // a focused input (or hovered on)
