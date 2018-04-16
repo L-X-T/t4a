@@ -73,7 +73,7 @@ if ( post_password_required() ) {
 		 * @hooked woocommerce_output_related_products - 20
 		 */
 		//do_action( 'woocommerce_after_single_product_summary' );
-    woocommerce_upsell_display();
+    woocommerce_upsell_display(3,3); // Display 3 products in rows of 3
 	?>
 </div>
 <?php do_action( 'woocommerce_after_single_product' ); ?>

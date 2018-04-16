@@ -193,11 +193,13 @@ h3, .h3 {
 	font-size: 1.3em;
 	color: $t4a-gold;
 	text-transform: uppercase;
+	letter-spacing: 0.2em;
 }
 
 h4, .h4 {
 	font-family: $t4a-font-bold;
 	text-transform: uppercase;
+	letter-spacing: 0.2em;
 	font-size: 1em;
 	padding:0;
 	margin:0;
@@ -277,6 +279,10 @@ HEADER STYLES
 	font-size: 2em;
 	cursor: pointer;
 	z-index: 100;
+
+	&.opened {
+		margin:1em 0;
+	}
 }
 
 .offcanvas-hamburger {
@@ -286,12 +292,11 @@ HEADER STYLES
 	span {
 		display: block;
 		position: absolute;
-		left: 24px;
-		height: 4px;
+		height: 3px;
 		width: 24px;
 		z-index: -1;
 
-		background: $black;
+		background: $t4a-gold;
 		opacity: 1;
 
 		-webkit-transform: rotate(0deg);
@@ -300,19 +305,19 @@ HEADER STYLES
 		transition: 0.3s ease-in-out;
 
 		.home & {
-			background: $white;
+			background: $t4a-gold-light;
 		}
 
 		&:nth-child(1) {
-			top: 20px;
+			top: 0px;
 
 			.opened & {
-				top: 28px;
+				top: 8px;
 				width: 0;
 			}
 		}
 		&:nth-child(2) {
-			top: 28px;
+			top: 8px;
 
 			.opened & {
 				-webkit-transform: rotate(45deg);
@@ -320,7 +325,7 @@ HEADER STYLES
 			}
 		}
 		&:nth-child(3) {
-			top: 28px;
+			top: 8px;
 
 			.opened & {
 				-webkit-transform: rotate(-45deg);
@@ -328,10 +333,10 @@ HEADER STYLES
 			}
 		}
 		&:nth-child(4) {
-			top: 36px;
+			top: 16px;
 
 			.opened & {
-				top: 28px;
+				top: 8px;
 				width: 0;
 			}
 		}
@@ -344,6 +349,7 @@ HEADER STYLES
 	left: 2.1em;
 	line-height: 1.5em;
 	color: $black;
+	display: none;
 
 	.home & {
 		color: $white;
