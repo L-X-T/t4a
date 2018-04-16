@@ -262,58 +262,68 @@ LAYOUT & GRID STYLES
   width: 760px;
 }
 
+/* line 31, ../scss/breakpoints/_768up.scss */
+#content .elementor-widget-text-editor .elementor-widget-container {
+  padding: 0 15%;
+}
+
 /*********************
 HEADER STYLES
 *********************/
-/* line 35, ../scss/breakpoints/_768up.scss */
+/* line 41, ../scss/breakpoints/_768up.scss */
 .header #fixed-header {
   display: block;
 }
-/* line 39, ../scss/breakpoints/_768up.scss */
+/* line 45, ../scss/breakpoints/_768up.scss */
 .header .t4a-main-menu {
   position: fixed;
   z-index: 100;
   top: 3em;
   left: 3em;
 }
-/* line 45, ../scss/breakpoints/_768up.scss */
+/* line 51, ../scss/breakpoints/_768up.scss */
 .home .header .t4a-main-menu a {
   color: #fff;
 }
-/* line 48, ../scss/breakpoints/_768up.scss */
+/* line 54, ../scss/breakpoints/_768up.scss */
 .home .header .t4a-main-menu a:hover, .home .header .t4a-main-menu a:focus {
   color: #ffcd80;
 }
-/* line 53, ../scss/breakpoints/_768up.scss */
+/* line 59, ../scss/breakpoints/_768up.scss */
 .elementor-editor-active .header .t4a-main-menu {
   position: absolute;
   z-index: -1;
 }
-/* line 59, ../scss/breakpoints/_768up.scss */
-.header .t4a-newsletter-link {
+/* line 65, ../scss/breakpoints/_768up.scss */
+.header .t4a-newsletter-link,
+.header .t4a-sub-menu {
   position: fixed;
   z-index: 100;
   right: 3em;
   top: 3em;
 }
-/* line 65, ../scss/breakpoints/_768up.scss */
-.home .header .t4a-newsletter-link a {
+/* line 72, ../scss/breakpoints/_768up.scss */
+.home .header .t4a-newsletter-link a, .home
+.header .t4a-sub-menu a {
   color: #fff;
 }
-/* line 68, ../scss/breakpoints/_768up.scss */
-.home .header .t4a-newsletter-link a:hover, .home .header .t4a-newsletter-link a:focus {
+/* line 75, ../scss/breakpoints/_768up.scss */
+.home .header .t4a-newsletter-link a:hover, .home .header .t4a-newsletter-link a:focus, .home
+.header .t4a-sub-menu a:hover, .home
+.header .t4a-sub-menu a:focus {
   color: #ffcd80;
 }
-/* line 73, ../scss/breakpoints/_768up.scss */
-.elementor-editor-active .header .t4a-newsletter-link {
+/* line 80, ../scss/breakpoints/_768up.scss */
+.elementor-editor-active .header .t4a-newsletter-link, .elementor-editor-active
+.header .t4a-sub-menu {
   position: absolute;
   z-index: -1;
 }
-/* line 79, ../scss/breakpoints/_768up.scss */
+/* line 86, ../scss/breakpoints/_768up.scss */
 .header #responsive-header {
   display: none;
 }
-/* line 83, ../scss/breakpoints/_768up.scss */
+/* line 90, ../scss/breakpoints/_768up.scss */
 .header #offcanvas-toggle {
   display: none;
 }
@@ -321,7 +331,7 @@ HEADER STYLES
 /*********************
 LOGO HEADER
 *********************/
-/* line 93, ../scss/breakpoints/_768up.scss */
+/* line 100, ../scss/breakpoints/_768up.scss */
 .home #logo-header {
   margin-top: 30vh;
 }
@@ -329,13 +339,13 @@ LOGO HEADER
 /*********************
 NAVIGATION STYLES
 *********************/
-/* line 102, ../scss/breakpoints/_768up.scss */
+/* line 109, ../scss/breakpoints/_768up.scss */
 .nav {
   /* end .menu ul li */
   /* highlight current page */
   /* end current highlighters */
 }
-/* line 105, ../scss/breakpoints/_768up.scss */
+/* line 112, ../scss/breakpoints/_768up.scss */
 .nav li a:hover, .nav li a:focus {
   color: #ca912b;
   text-decoration: none;
@@ -345,28 +355,28 @@ NAVIGATION STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
-/* line 154, ../scss/breakpoints/_768up.scss */
+/* line 161, ../scss/breakpoints/_768up.scss */
 .sidebar {
   margin-top: 2.2em;
 }
 
-/* line 158, ../scss/breakpoints/_768up.scss */
+/* line 165, ../scss/breakpoints/_768up.scss */
 .widgettitle {
   border-bottom: 2px solid #444;
   margin-bottom: 0.75em;
 }
 
-/* line 163, ../scss/breakpoints/_768up.scss */
+/* line 170, ../scss/breakpoints/_768up.scss */
 .widget {
   padding: 0 10px;
   margin: 2.2em 0;
 }
-/* line 168, ../scss/breakpoints/_768up.scss */
+/* line 175, ../scss/breakpoints/_768up.scss */
 .widget ul li {
   margin-bottom: 0.75em;
   /* deep nesting */
 }
-/* line 176, ../scss/breakpoints/_768up.scss */
+/* line 183, ../scss/breakpoints/_768up.scss */
 .widget ul li ul {
   margin-top: 0.75em;
   padding-left: 1em;
@@ -386,7 +396,7 @@ SIDEBARS & ASIDES
 /******************
 PRODUCTS
 ******************/
-/* line 277, ../scss/breakpoints/_768up.scss */
+/* line 284, ../scss/breakpoints/_768up.scss */
 .woocommerce #content div.product div.summary {
   position: absolute;
   right: 0;
@@ -406,7 +416,7 @@ you'll probably need to do quite a bit
 of overriding here if you styled them for
 mobile. Make sure to double check these!
 */
-/* line 300, ../scss/breakpoints/_768up.scss */
+/* line 307, ../scss/breakpoints/_768up.scss */
 .footer-links ul li {
   /*
   be careful with the depth of your menus.

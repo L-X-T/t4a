@@ -18,17 +18,6 @@ Stylesheet: Elementor Styles
   padding: 0 0 1em 0;
 }
 
-.elementor-widget-text-editor .elementor-widget-container {
-  padding: 0 15%;
-}
-
-@media (max-width: 525px){
-  .elementor-widget-text-editor .elementor-widget-container {
-    padding-left: 0!important;
-    padding-right: 0!important;
-  }
-}
-
 /*****************
 CALL TO ACTION
 *****************/
@@ -57,4 +46,27 @@ CALL TO ACTION
       color: $t4a-gold-light;
     }
   }
+}
+
+.elementor-button {
+    display: inline-block;
+    line-height: 1.6em;
+    background-color: #fff;
+    color: $t4a-gold;
+    text-align: center;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    -webkit-border-radius: 0 !important;
+    border-radius: 0 !important;
+    border: 2px solid $t4a-gold;
+    padding: 1.5em;
+}
+
+.elementor-button.elementor-size-md {
+    width: 80%;
+    max-width: 320px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-size: 0.8em;
 }
