@@ -104,12 +104,12 @@ add_filter( 'image_size_names_choose', 'bones_custom_image_sizes' );
 
 function bones_custom_image_sizes( $sizes ) {
     return array_merge( $sizes, array(
-        'full-width' => __('Full width - 1920 x 1280'),
+        'full-width' => __('Full width - 1920 x 1440'),
         'two-thirds' => __('Two thirds - 1280 x 960'),
-        'half-width' => __('Half width - 960 x 640'),
-        'portrait' => __('Portrait - 1280 x 640'),
+        'half-width' => __('Half width - 960 x 720'),
+        'portrait' => __('Portrait - 1280 x 720'),
         'product' => __('Product - 640 x 640, no crop'),
-        'product_thumb' => __('Product Thumb - 320 x 320, no crop'),
+        'product_thumb' => __('Product Thumb - 380 x 380, no crop'),
     ) );
 }
 
