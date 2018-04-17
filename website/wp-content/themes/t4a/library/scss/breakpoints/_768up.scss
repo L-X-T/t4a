@@ -19,12 +19,72 @@ GENERAL STYLES
 
 body {}
 
+/******************************************************************
+H1, H2, H3, H4, H5 STYLES
+******************************************************************/
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+	font-family: $t4a-font-bold;
+	text-rendering: optimizelegibility;
+	font-weight: normal;
+	/*
+	if you're going to use webfonts, be sure to check your weights
+	http://css-tricks.com/watch-your-font-weight/
+	*/
+
+	/* removing text decoration from all headline links */
+	a {
+		text-decoration: none;
+	}
+}
+
+h1, .h1 {
+	font-size: 1.75em;
+	line-height: 1.333em;
+	margin-bottom: 1.8em;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	color: $t4a-gold;
+}
+
+h2, .h2 {
+	font-size: 1.5em;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	line-height: 1.4em;
+	margin-bottom: 0.375em;
+	color: $t4a-gold;
+}
+
+h3, .h3 {
+	font-size: 1.3em;
+	color: $t4a-gold;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+}
+
+h4, .h4 {
+	font-family: $t4a-font-bold;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	font-size: 1em;
+	padding:0;
+	margin:0;
+}
+
+h5, .h5 {
+	font-size: 0.846em;
+	line-height: 2.09em;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
 /*********************
 LAYOUT & GRID STYLES
 *********************/
 
 .wrap {
-	width: 760px;
+	/*width: 760px;*/
 }
 
 #content {
@@ -296,6 +356,10 @@ PRODUCTS
 /*********************
 FOOTER STYLES
 *********************/
+
+.hentry footer {
+  height: 350px;
+}
 
 /*
 you'll probably need to do quite a bit

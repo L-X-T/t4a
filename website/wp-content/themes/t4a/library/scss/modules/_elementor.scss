@@ -45,7 +45,22 @@ CALL TO ACTION
       letter-spacing: 0.2em;
       color: $t4a-gold-light;
     }
+
+    @media (max-width: 768px) {
+      .elementor-cta__title {
+        font-size: 1.25em;
+      }
+      .elementor-cta__description {
+        position:absolute;
+        padding-top: 2.2em;
+        font-size: 1.1em;
+      }
+    }
   }
+}
+
+.elementor-cta--skin-cover .elementor-cta__content {
+    min-height:100px;
 }
 
 .elementor-button {
