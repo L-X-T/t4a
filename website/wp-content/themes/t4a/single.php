@@ -5,6 +5,9 @@
 				<div id="inner-content" class="wrap cf">
 
 					<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+
+					<div id="logo-header"><a href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php the_field('opt_logo_header', 'options'); ?>" alt="Time4Africa"></a></div>
+
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 							<?php
@@ -44,7 +47,7 @@
 
 					</main>
 
-					<?php get_sidebar(); ?>
+					<?php //get_sidebar(); ?>
 
 				</div>
 
