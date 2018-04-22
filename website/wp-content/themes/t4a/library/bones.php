@@ -211,7 +211,9 @@ function bones_theme_support() {
 		array(
 			'main-nav' => __( 'Hauptmenu', 'bonestheme' ),   // main nav in header
 			'footer-links' => __( 'Footer Links', 'bonestheme' ), // secondary nav in footer
-			'footer-mitte' => __( 'Footer Mitte', 'bonestheme' ) // secondary nav in footer
+			'footer-mitte' => __( 'Footer Mitte', 'bonestheme' ), // secondary nav in footer
+      'footer-right' => __( 'Footer Rechts', 'bonestheme' ) // secondary nav in footer
+
 		)
 	);
 

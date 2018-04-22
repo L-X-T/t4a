@@ -53,6 +53,7 @@
 
                     </nav>
 
+										<?php /* ?>
                     <div class="d-1of3">
                         <span class="menu-title">Newsletter Signup</span>
 
@@ -62,6 +63,27 @@
                             <input type="radio" id="male" name="frm_sex" value="m"/><label for="male">Male</label>
                         </form>
                     </div>
+										<?php */ ?>
+										<nav role="navigation" class="d-1of3">
+											<?php $location = 'footer-right';
+											    if (has_nav_menu($location)) {
+					                                $menuObj = get_menu_by_location($location);
+					                                wp_nav_menu( array(
+					                                    'container' => 'div',                           // enter '' to remove nav container (just make sure .footer-mitte in _base.scss isn't wrapping)
+					                                    'container_class' => 'footer-links cf',         // class of container (should you choose to use it)
+					                                    'menu' => __( 'Footer Links', 'bonestheme' ),   // nav name
+					                                    'menu_class' => 'nav footer-nav cf',            // adding custom nav class
+					                                    'theme_location'  => $location,
+					                                    'before' => '',                                 // before the menu
+					                                    'after' => '',                                  // after the menu
+					                                    'link_before' => '',                            // before each link
+					                                    'link_after' => '',                             // after each link
+					                                    'depth' => 0,                                   // limit the depth of the nav
+					                                    'fallback_cb' => 'bones_footer_links_fallback', // fallback function
+					                                    'items_wrap'=> '<span class="menu-title">'.esc_html($menuObj->name).'</span><ul id="%1$s" class="%2$s">%3$s</ul>'
+					                                ));
+											    } ?>
+                    </nav>
 				</div>
 
 			</footer>

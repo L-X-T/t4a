@@ -26,8 +26,8 @@ WEBFONTS
 	font-style: normal;
 }
 
-strong {
-	font-family: HelveticaNeueLTStd-Bd;
+b, strong, .strong {
+	font-family: $t4a-font-bold;
 	font-weight: normal;
 	font-style: normal;
 }
@@ -208,6 +208,22 @@ h5, .h5 {
 	line-height: 2.09em;
 	text-transform: uppercase;
 	letter-spacing: 2px;
+}
+
+.underline h1 {
+	display:inline;
+	border-bottom: 3px solid;
+}
+
+.underline h2 {
+	display:inline;
+	border-bottom: 2px solid;
+}
+
+.underline h3,
+.underline h4 {
+	display:inline;
+	border-bottom: 1px solid;
 }
 
 /*********************
@@ -619,11 +635,13 @@ HOME SLIDER STYLES
 POSTS & CONTENT STYLES
 *********************/
 
+/*
 #content {
 	.elementor-widget-text-editor .elementor-widget-container {
 		padding: 0 10%;
 	}
 }
+*/
 
 		.hentry {
 			header {
