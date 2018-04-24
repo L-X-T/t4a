@@ -105,6 +105,16 @@ class Settings extends Settings_Page {
 		);
 	}
 
+	/**
+	 * Register Elementor knowledge base sub-menu.
+	 *
+	 * Add new Elementor knowledge base sub-menu under the main Elementor menu.
+	 *
+	 * Fired by `admin_menu` action.
+	 *
+	 * @since 2.0.3
+	 * @access public
+	 */
 	public function register_knowledge_base_menu() {
 		add_submenu_page(
 			self::PAGE_ID,
@@ -123,7 +133,7 @@ class Settings extends Settings_Page {
 	 *
 	 * Fired by `admin_init` action.
 	 *
-	 * @since 1.0.0
+	 * @since 2.0.3
 	 * @access public
 	 */
 	public function handle_external_redirects() {
@@ -142,19 +152,37 @@ class Settings extends Settings_Page {
 		}
 	}
 
+	/**
+	 * Display settings page.
+	 *
+	 * Output the content for the custom fonts page.
+	 *
+	 * @since 2.0.0
+	 * @access public
+	 */
 	public function elementor_custom_fonts() {
 		?>
-        <div class="wrap">
-            <div class="elementor-blank_state">
-                <i class="eicon-nerd-chuckle"></i>
-                <h2><?php echo __( 'Add Your Custom Fonts', 'elementor' ); ?></h2>
-                <p><?php echo __( 'Custom Fonts allows you to add your self-hosted fonts and use them on your Elementor projects to create a unique brand language.', 'elementor' ); ?></p>
-                <a class="elementor-button elementor-button-default elementor-button-go-pro" target="_blank" href="#"><?php echo __( 'Go Pro', 'elementor' ); ?></a>
-            </div>
-        </div><!-- /.wrap -->
+		<div class="wrap">
+			<div class="elementor-blank_state">
+				<i class="eicon-nerd-chuckle"></i>
+				<h2><?php echo __( 'Add Your Custom Fonts', 'elementor' ); ?></h2>
+				<p><?php echo __( 'Custom Fonts allows you to add your self-hosted fonts and use them on your Elementor projects to create a unique brand language.', 'elementor' ); ?></p>
+				<a class="elementor-button elementor-button-default elementor-button-go-pro" target="_blank" href="#"><?php echo __( 'Go Pro', 'elementor' ); ?></a>
+			</div>
+		</div><!-- /.wrap -->
 		<?php
 	}
 
+	/**
+	 * On admin init.
+	 *
+	 * Preform actions on WordPress admin initialization.
+	 *
+	 * Fired by `admin_init` action.
+	 *
+	 * @since 2.0.0
+	 * @access public
+	 */
 	public function on_admin_init() {
 		$this->handle_external_redirects();
 
@@ -176,11 +204,13 @@ class Settings extends Settings_Page {
 		global $submenu;
 
 		if ( isset( $submenu['elementor'] ) ) {
+			// @codingStandardsIgnoreStart
 			$submenu['elementor'][0][0] = __( 'Settings', 'elementor' );
 
 			$hold_menu_data = $submenu['elementor'][0];
 			$submenu['elementor'][0] = $submenu['elementor'][1];
 			$submenu['elementor'][1] = $hold_menu_data;
+			// @codingStandardsIgnoreEnd
 		}
 	}
 
@@ -395,8 +425,16 @@ class Settings extends Settings_Page {
 		return __( 'Elementor', 'elementor' );
 	}
 
+	/**
+	 * Handle general settings update.
+	 *
+	 * Save general settings in one list for a future usage.
+	 *
+	 * @since 2.0.0
+	 * @access private
+	 */
 	private function handle_general_settings_update() {
-		if ( ! empty( $_POST['option_page'] ) && self::PAGE_ID === $_POST['option_page'] && ! empty( $_POST['action'] ) && 'update' === $_POST['action']  ) {
+		if ( ! empty( $_POST['option_page'] ) && self::PAGE_ID === $_POST['option_page'] && ! empty( $_POST['action'] ) && 'update' === $_POST['action'] ) {
 			check_admin_referer( 'elementor-options' );
 
 			$saved_general_settings = get_option( General_Settings_Manager::META_KEY );

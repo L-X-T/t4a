@@ -4,7 +4,7 @@ Tags: page builder, editor, landing page, drag-and-drop, elementor, visual edito
 Requires at least: 4.6
 Tested up to: 4.9
 Requires PHP: 5.4
-Stable tag: 2.0.3
+Stable tag: 2.0.8
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -85,7 +85,7 @@ We've integrated RTL and multi language support within the framework of our page
 
 = Developer API. =
 Elementor page builder is free and open source. It's the perfect page builder plugin to be extended and integrated further. It was created and developed with the developer in mind, and we have already seen some truly remarkable addons already developed.
-We have created an extensive [API documentation](https://github.com/pojome/elementor/tree/master/docs), to help you get started and learn just how to integrate with Elementor.
+To help you get started and learn just how to integrate with Elementor, we have created the [Official Elementor Developer Resources](https://developers.elementor.com/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme) and the [Code Reference](https://code.elementor.com/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme).
 
 = Translations =
 - [English (Australia)](https://translate.wordpress.org/locale/en-au/default/wp-plugins/elementor) - (en_AU)
@@ -97,10 +97,11 @@ We have created an extensive [API documentation](https://github.com/pojome/eleme
 - [Japanese](https://translate.wordpress.org/locale/ja/default/wp-plugins/elementor) - (ja)
 - [Portuguese (Portugal)](https://translate.wordpress.org/locale/pt/default/wp-plugins/elementor) - (pt_PT)
 - [Portuguese (Brazil)](https://translate.wordpress.org/locale/pt-br/default/wp-plugins/elementor) - (pt_BR)
-- [Swedish](https://translate.wordpress.org/locale/se/default/wp-plugins/elementor) - (sv_SE)
+- [Swedish](https://translate.wordpress.org/locale/sv/default/wp-plugins/elementor) - (sv_SE)
 - [Dutch](https://translate.wordpress.org/locale/nl/default/wp-plugins/elementor) - (nl_NL)
 - [Danish](https://translate.wordpress.org/locale/da/default/wp-plugins/elementor) - (da_DK)
 - [Polish](https://translate.wordpress.org/locale/pl/default/wp-plugins/elementor) - (pl_PL)
+- [Chinese (China)](https://translate.wordpress.org/locale/zh-cn/default/wp-plugins/elementor) - (zh_CN)
 - [Chinese (Taiwan)](https://translate.wordpress.org/locale/zh-tw/default/wp-plugins/elementor) - (zh_TW)
 - [Persian](https://translate.wordpress.org/locale/fa/default/wp-plugins/elementor) - (fa_IR)
 - [Hebrew](https://translate.wordpress.org/locale/he/default/wp-plugins/elementor) - (he_IL)
@@ -108,7 +109,10 @@ We have created an extensive [API documentation](https://github.com/pojome/eleme
 - [Romanian](https://translate.wordpress.org/locale/ro/default/wp-plugins/elementor) - (ro_RO)
 - [Bulgarian](https://translate.wordpress.org/locale/bg/default/wp-plugins/elementor) - (bg_BG)
 - [Greek](https://translate.wordpress.org/locale/el/default/wp-plugins/elementor) - (el)
+- [Catalan](https://translate.wordpress.org/locale/ca/default/wp-plugins/elementor) - (ca)
 - [Czech](https://translate.wordpress.org/locale/cs/default/wp-plugins/elementor) - ( cs_CZ)
+- [Croatian](https://translate.wordpress.org/locale/hr/default/wp-plugins/elementor) - (hr)
+- [Finnish](https://translate.wordpress.org/locale/fi/default/wp-plugins/elementor) - (fi)
 
 = Be a contributor =
 If you want to contribute, go to our [Elementor GitHub Repository](https://github.com/pojome/elementor) and see where you can help.
@@ -188,6 +192,53 @@ No. Elementor supports WordPress 4.6 or greater, and is compatible with PHP 5.4 
 7. **Shape Divider.** Choose from a wide array of shape dividers and separate your sections in endless ways, that until now were simply not possible.
 
 == Changelog ==
+
+= 2.0.8 - 2018-04-23 =
+* Tweak: Added action hook for caching plugins when clearing CSS files `do_action( 'elementor/css-file/clear_cache' );` ([#4179](https://github.com/pojome/elementor/issues/4179))
+* Tweak: Added Page Templates support only for layout pages
+* Fix: Smooth scrolling not working ([#4168](https://github.com/pojome/elementor/issues/4168))
+* Fix: Masonry not working in edge cases
+* Fix: Stretch section for archive pages
+* Fix: Icon vertical alignment in icon list widget
+
+= 2.0.7 - 2018-04-18 =
+* Tweak: Rename filter `elementor/get_document/post_id` to `elementor/documents/get/post_id`
+* Tweak: Added Divider control for Icon List widget on inline skin
+* Tweak: Added CSS classes per document in Preview
+* Tweak: Added option to avoid export data by adding `export=false` to control args
+* Fix: Support for editing images in WP Media Modal ([#3062](https://github.com/pojome/elementor/issues/3062))
+* Fix: Responsive inline alignment for Icon List widget
+* Fix: Added higher priority to support GoogleFonts in locations
+* Fix: Import templates with Dynamic data
+* Fix: Editing buttons missing when preview set as archive
+* Fix: Export document settings for all template types
+
+= 2.0.6 - 2018-04-15 =
+* New: Image widget - added new control for Image width
+* Tweak: Added support for dynamic video via ACF
+* Tweak: Reorder admin columns in My Templates
+* Tweak: Update Eicons v3.2.2
+* Tweak: Added `elementor/get_document/post_id` filter for `get document` - compatibility for translation plugins
+* Tweak: Print container classes per document
+* Tweak: Added `elementor-edit-area-preview` and `elementor-edit-area-active` classes
+* Tweak: Removed wrapper for dynamic data
+* Fix: Per device Visibility for editor with multiple elementor areas
+* Fix: CSS glitch for URL input with dynamic
+* Fix: Dynamic Show Before/After only when value is not empty
+
+= 2.0.5 - 2018-04-11 =
+* Fix: Avoid merge for incorrect page settings data
+* Fix: Style tab on document settings not saving on autosave
+* Fix: Duplicate icons by updated Eicons library
+
+= 2.0.4 - 2018-04-09 =
+* Tweak: Update Google Fonts list with more then 30 new fonts
+* Tweak: Updated Eicons to v3.2.0
+* Fix: Page template doesn't work in draft status ([#3706](https://github.com/pojome/elementor/issues/3706))
+* Fix: Make sure that document settings works only on existing posts ([#3993](https://github.com/pojome/elementor/issues/3993), [Topic](https://wordpress.org/support/topic/php-fatal-error-after-last-update/))
+* Fix: Removed some duplicate strings
+* Fix: Undefined index when save editor using old method
+* Fix: Use `&nbsp;` to add spaces before/after for tags with HTML ([#3826](https://github.com/pojome/elementor/issues/3826))
 
 = 2.0.3 - 2018-03-29 =
 * Tweak: Added Knowledge Base link to WordPress admin menu

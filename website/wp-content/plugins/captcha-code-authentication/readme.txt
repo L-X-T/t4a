@@ -3,7 +3,7 @@ Contributors: vinoj.cardoza
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=vinoj%2ecardoza%40gmail%2ecom&currency_code=GBP&lc=US&bn=PP%2dDonationsBF&charset=UTF%2d8
 Tags: captcha, captcha code, wordpress, wordpress captcha, captcha for wordpress, form captcha, forms captcha, captcha security, security
 Requires at least: 3.0
-Tested up to: 4.9.2
+Tested up to: 4.9.5
 Stable tag: trunk
 License: GPLv2 or later
 
@@ -48,6 +48,7 @@ The translation were done using a translation software. I am not sure about the 
 * Slovak (Translated by Tomas Bujna)
 * Spanish (Translated by Juan Cuquejo)
 * Swedish (Translated by Carl-Gunnar)
+* Turkish (Traslated by Aygin Net)
 
 == Installation ==
 
@@ -71,6 +72,9 @@ Uninstalling is as simple as deactivating and deleting the plugin.
 4. screenshot-4.png
 
 == Change Log ==
+
+= Version 2.6.6 =
+* Turkish translation added
 
 = Version 2.6.5 =
 * Minor bug fix on variable declaration

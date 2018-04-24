@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Elementor preview class.
+ * Elementor preview.
  *
  * Elementor preview handler class is responsible for initializing Elementor in
  * preview mode.
@@ -101,7 +101,7 @@ class Preview {
 	 * @since 1.0.0
 	 * @access public
 	 *
-	 * @param int $post_id
+	 * @param int $post_id Optional. Post ID. Default is `0`.
 	 *
 	 * @return bool Whether preview mode is active.
 	 */
@@ -130,13 +130,21 @@ class Preview {
 	 * @since 1.0.0
 	 * @access public
 	 *
-	 * @param string $content
+	 * @param string $content The content of the builder.
 	 *
 	 * @return string HTML wrapper for the builder.
 	 */
 	public function builder_wrapper( $content ) {
 		if ( get_the_ID() === $this->post_id ) {
-			$content = '<div id="elementor" class="elementor elementor-edit-mode"></div>';
+			$classes = 'elementor-edit-mode';
+
+			$document = Plugin::$instance->documents->get( $this->post_id );
+
+			if ( $document ) {
+				$classes .= ' ' . $document->get_container_classes();
+			}
+
+			$content = '<div id="elementor" class="' . $classes . '"></div>';
 		}
 
 		return $content;
