@@ -370,4 +370,11 @@ add_action( 'admin_menu', 'revcon_change_post_label' );
 add_action( 'init', 'revcon_change_post_object' );
 */
 
+
+// custom t4a skin for elementor posts widget
+add_action( 'elementor/widget/posts/skins_init', function( $widget ) {
+	require_once( 'elementor/skin-custom.php' );
+	$widget->add_skin( new ElementorPro\Modules\Posts\Skins\Skin_Custom( $widget ) );
+}, 10, 1);
+
 /* DON'T DELETE THIS CLOSING TAG */ ?>
