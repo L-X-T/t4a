@@ -1538,6 +1538,34 @@ CALL TO ACTION
   font-size: 0.8em;
 }
 
+/*****************
+* custom skin fix
+*****************/
+/* line 92, ../scss/modules/_elementor.scss */
+.elementor-posts-container.elementor-posts--skin-custom .elementor-post__thumbnail {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* line 99, ../scss/modules/_elementor.scss */
+.elementor-posts-container.elementor-posts--skin-custom .elementor-post__thumbnail img {
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/* line 109, ../scss/modules/_elementor.scss */
+.elementor-posts-container.elementor-posts--skin-custom .elementor-post__thumbnail.elementor-fit-height img {
+  height: 100%;
+  width: auto;
+}
+
 /******************************************************************
 Site Name: time4africa
 Author: Ankerlos

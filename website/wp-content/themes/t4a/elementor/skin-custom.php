@@ -41,45 +41,37 @@ class Skin_Custom extends Skin_Base {
 			return;
 		}
 
-		$settings = $this->parent->get_settings();
-		$setting_key = $this->get_control_id( 'thumbnail_size' );
+		$settings                 = $this->parent->get_settings();
+		$setting_key              = $this->get_control_id( 'thumbnail_size' );
 		$settings[ $setting_key ] = [
 			'id' => get_post_thumbnail_id(),
 		];
-		$thumbnail_html = Group_Control_Image_Size::get_attachment_image_html( $settings, $setting_key );
+		$thumbnail_html           = Group_Control_Image_Size::get_attachment_image_html( $settings, $setting_key );
 
-		if ( empty( $thumbnail_html ) ) {
-			return;
-		}
-		?>
-		<a class="elementor-post__thumbnail__link" href="<?php echo get_permalink(); ?>">
-			<div class="elementor-post__thumbnail"><?php echo $thumbnail_html; ?></div>
-		</a>
-        <?php global $post; // var_dump(get_field('gallery'));
-        if (!empty(get_field('gallery')) && is_array(get_field('gallery'))) : ?>
-        <div class="gallery">
-            <?php foreach (get_field('gallery') as $index => $image) : ?>
-            <a href="<?php echo $image['url']; ?>" data-fancybox="gallery" data-caption="<?php echo $image['title']; ?>">
-                <img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>" />
-            </a>
-            <?php endforeach; ?>
-        </div>
-		<?php endif;
-	}
+		$thumbId       = get_post_thumbnail_id();
+		$thumbSrcLarge = wp_get_attachment_image_src( $thumbId, 'large', false );
 
-	protected function render_title() {
-		if ( ! $this->get_instance_value( 'show_title' ) ) {
+		if ( empty( $thumbnail_html ) || empty( $thumbSrcLarge ) ) {
 			return;
 		}
 
-		$tag = $this->get_instance_value( 'title_tag' );
-		?>
-		<<?php echo $tag; ?> class="elementor-post__title">
-		<a href="<?php echo get_permalink(); ?>">
-			<?php the_title(); ?>
-		</a>
-		</<?php echo $tag; ?>>
+		global $post; ?>
+        <a class="elementor-post__thumbnail__link" href="<?php echo $thumbSrcLarge[0]; ?>"
+           data-fancybox="gallery_<?php echo $post->post_name; ?>"
+           data-caption="<?php echo get_the_title( $thumbId ); ?>">
+            <div class="elementor-post__thumbnail elementor-fit-height"><?php echo $thumbnail_html; ?></div>
+        </a>
+		<?php // var_dump(get_field('gallery'));
+		if ( ! empty( get_field( 'gallery' ) ) && is_array( get_field( 'gallery' ) ) ) : ?>
+            <div class="gallery" style="display: none">
+				<?php foreach ( get_field( 'gallery' ) as $index => $image ) : ?>
+                    <a href="<?php echo $image['url']; ?>" data-fancybox="gallery_<?php echo $post->post_name; ?>"
+                       data-caption="<?php echo $image['title']; ?>">
+                        <img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>"/>
+                    </a>
+				<?php endforeach; ?>
+            </div>
 		<?php
+		endif;
 	}
-
 }
