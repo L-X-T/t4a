@@ -56,22 +56,29 @@ class Skin_Custom extends Skin_Base {
 		}
 
 		global $post; ?>
-		<?php if ( ! empty( get_field( 'gallery' ) ) && is_array( get_field( 'gallery' ) ) ) : ?>
-        <a class="elementor-post__thumbnail__link" href="<?php echo $thumbSrcLarge[0]; ?>"
-           data-elementor-open-lightbox="default" data-elementor-lightbox-slideshow="gallery_<?php echo $post->post_name; ?>" data-elementor-lightbox-index="0"
-           data-caption="<?php echo get_the_title( $thumbId ); ?>">
+		<?php $myPdf = get_field( "pdflink" ); ?>
 
+		<?php	if ( $myPdf ) : ?>
+			<a class="elementor-post__thumbnail__link" target="_blank" href="<?php	echo get_field('pdflink'); ?>">
+				<div class="elementor-post__thumbnail elementor-fit-height"><?php echo $thumbnail_html; ?></div>
+		 </a>
 		<?php else: ?>
-				<div class="elementor-post__thumbnail__link">
-		<?php endif; ?>
-            <div class="elementor-post__thumbnail elementor-fit-height"><?php echo $thumbnail_html; ?></div>
-		<?php if ( ! empty( get_field( 'gallery' ) ) && is_array( get_field( 'gallery' ) ) ) : ?>
-        </a>
-		<?php else: ?>
-				</div>
+				<?php if ( ! empty( get_field( 'gallery' ) ) && is_array( get_field( 'gallery' ) ) ) : ?>
+		        <a class="elementor-post__thumbnail__link" href="<?php echo $thumbSrcLarge[0]; ?>"
+		           data-elementor-open-lightbox="default" data-elementor-lightbox-slideshow="gallery_<?php echo $post->post_name; ?>" data-elementor-lightbox-index="0"
+		           data-caption="<?php echo get_the_title( $thumbId ); ?>">
+				<?php else: ?>
+						<div class="elementor-post__thumbnail__link">
+				<?php endif; ?>
+		            <div class="elementor-post__thumbnail elementor-fit-height"><?php echo $thumbnail_html; ?></div>
+				<?php if ( ! empty( get_field( 'gallery' ) ) && is_array( get_field( 'gallery' ) ) ) : ?>
+		        </a>
+				<?php else: ?>
+						</div>
+				<?php endif; ?>
 		<?php endif; ?>
 
-		<?php // var_dump(get_field('gallery'));
+		<?php // var_dump(get_field('pdflink'));
 			if ( ! empty( get_field( 'gallery' ) ) && is_array( get_field( 'gallery' ) ) ) : ?>
         <div class="gallery" style="display: none">
 					<?php foreach ( get_field( 'gallery' ) as $index => $image ) : ?>
