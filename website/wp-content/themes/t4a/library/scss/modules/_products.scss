@@ -98,7 +98,7 @@ p.t4a-master-price {
 
 .product-info-box {
   border: 2px solid $t4a-gold;
-  padding: 1.5em;
+  padding: 0;
   width: 80%;
   max-width:320px;
   margin-left: auto;
@@ -109,6 +109,8 @@ p.t4a-master-price {
   font-size: 0.8em;
   & a {
     text-decoration: none;
+    padding: 1.5em;
+    display:block;
   }
   & p {
     padding:0;

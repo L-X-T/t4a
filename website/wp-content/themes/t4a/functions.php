@@ -77,6 +77,7 @@ add_image_size( 'full-width', 1920, 1280, true );
 add_image_size( 'two-thirds', 1280, 960, true );
 add_image_size( 'half-width', 960, 640, true );
 add_image_size( 'portrait', 640, 1280, true );
+add_image_size( 'product_zoom', 1200, 1200, false );
 add_image_size( 'product', 640, 640, false );
 add_image_size( 'product_thumb', 320, 320, false );
 
@@ -108,6 +109,7 @@ function bones_custom_image_sizes( $sizes ) {
         'two-thirds' => __('Two thirds - 1280 x 960'),
         'half-width' => __('Half width - 960 x 720'),
         'portrait' => __('Portrait - 1280 x 720'),
+        'product_zoom' => __('Product - 1200 x 1200, no crop'),
         'product' => __('Product - 640 x 640, no crop'),
         'product_thumb' => __('Product Thumb - 380 x 380, no crop'),
     ) );

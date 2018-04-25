@@ -478,14 +478,12 @@ and more scalable.
 
 	/* highlight current page */
 	li.current-menu-item,
-	li.current_page_item {
-		a {
+	li.current_page_item >a {
 			color: $t4a-gold;
-		}
 	}
 
 	li.current-page-parent > a {
-		color: $t4a-gold;
+		/*color: $t4a-gold;*/
 	}
 
 	/* end current highlighters */

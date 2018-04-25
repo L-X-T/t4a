@@ -45,7 +45,8 @@ $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_cl
           <?php endif;
             //wp_get_attachment_image( $post_thumbnail_id,  'two_thirds' );
             } else {
-			    $html  = wc_get_gallery_image_html( $post_thumbnail_id, true );
+			    //$html  = wc_get_gallery_image_html( $post_thumbnail_id, true );
+          $html  = wp_get_attachment_image( $post_thumbnail_id,  'product_thumb' );
             }
 		} else {
 			/*
