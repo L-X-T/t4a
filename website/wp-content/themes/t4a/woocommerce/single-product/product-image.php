@@ -39,7 +39,11 @@ $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_cl
 		<?php
 		if ( has_post_thumbnail() ) {
 		    if ( get_field('pro-layout') === '1col' ) {
-			    $html  = wp_get_attachment_image( $post_thumbnail_id,  'two_thirds' );
+          $image = get_field('1col_image');
+          if( !empty($image) ): ?>
+              <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+          <?php endif;
+            //wp_get_attachment_image( $post_thumbnail_id,  'two_thirds' );
             } else {
 			    $html  = wc_get_gallery_image_html( $post_thumbnail_id, true );
             }

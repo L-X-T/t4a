@@ -56,22 +56,32 @@ class Skin_Custom extends Skin_Base {
 		}
 
 		global $post; ?>
+		<?php if ( ! empty( get_field( 'gallery' ) ) && is_array( get_field( 'gallery' ) ) ) : ?>
         <a class="elementor-post__thumbnail__link" href="<?php echo $thumbSrcLarge[0]; ?>"
-           data-fancybox="gallery_<?php echo $post->post_name; ?>"
+           data-elementor-open-lightbox="default" data-elementor-lightbox-slideshow="gallery_<?php echo $post->post_name; ?>" data-elementor-lightbox-index="0"
            data-caption="<?php echo get_the_title( $thumbId ); ?>">
+
+		<?php else: ?>
+				<div class="elementor-post__thumbnail__link">
+		<?php endif; ?>
             <div class="elementor-post__thumbnail elementor-fit-height"><?php echo $thumbnail_html; ?></div>
+		<?php if ( ! empty( get_field( 'gallery' ) ) && is_array( get_field( 'gallery' ) ) ) : ?>
         </a>
+		<?php else: ?>
+				</div>
+		<?php endif; ?>
+
 		<?php // var_dump(get_field('gallery'));
-		if ( ! empty( get_field( 'gallery' ) ) && is_array( get_field( 'gallery' ) ) ) : ?>
-            <div class="gallery" style="display: none">
-				<?php foreach ( get_field( 'gallery' ) as $index => $image ) : ?>
-                    <a href="<?php echo $image['url']; ?>" data-fancybox="gallery_<?php echo $post->post_name; ?>"
+			if ( ! empty( get_field( 'gallery' ) ) && is_array( get_field( 'gallery' ) ) ) : ?>
+        <div class="gallery" style="display: none">
+					<?php foreach ( get_field( 'gallery' ) as $index => $image ) : ?>
+            <a href="<?php echo $image['url']; ?>" data-elementor-open-lightbox="default" data-elementor-lightbox-slideshow="gallery_<?php echo $post->post_name; ?>" data-elementor-lightbox-index="0"
                        data-caption="<?php echo $image['title']; ?>">
-                        <img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>"/>
-                    </a>
-				<?php endforeach; ?>
-            </div>
-		<?php
-		endif;
-	}
+              <img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>"/>
+            </a>
+					<?php endforeach; ?>
+        </div>
+			<?php
+			endif;
+			}
 }

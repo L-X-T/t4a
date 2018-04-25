@@ -338,39 +338,6 @@ function wc_remove_link_on_thumbnails( $html ) {
      return strip_tags( $html,'<div><img>' );
 }
 
-
-//rename post to media
-/*function revcon_change_post_label() {
-    global $menu;
-    global $submenu;
-    $menu[5][0] = 'Media';
-    $submenu['edit.php'][5][0] = 'Media Post';
-    $submenu['edit.php'][10][0] = 'Add Media Post';
-    $submenu['edit.php'][16][0] = 'Tags';
-}
-function revcon_change_post_object() {
-    global $wp_post_types;
-    $labels = &$wp_post_types['post']->labels;
-    $labels->name = 'Media Post';
-    $labels->singular_name = 'Media Post';
-    $labels->add_new = 'Add Media Post';
-    $labels->add_new_item = 'Add Media Post';
-    $labels->edit_item = 'Edit Media Post';
-    $labels->new_item = 'Media Post';
-    $labels->view_item = 'View Media Post';
-    $labels->search_items = 'Search Media Post';
-    $labels->not_found = 'No Media Post found';
-    $labels->not_found_in_trash = 'No Media Post found in Trash';
-    $labels->all_items = 'All Media Post';
-    $labels->menu_name = 'Media Post';
-    $labels->name_admin_bar = 'Media Post';
-}
-
-add_action( 'admin_menu', 'revcon_change_post_label' );
-add_action( 'init', 'revcon_change_post_object' );
-*/
-
-
 // custom t4a skin for elementor posts widget
 add_action( 'elementor/widget/posts/skins_init', function( $widget ) {
 	require_once( 'elementor/skin-custom.php' );

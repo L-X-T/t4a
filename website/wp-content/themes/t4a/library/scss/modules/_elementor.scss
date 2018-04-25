@@ -110,3 +110,19 @@ CALL TO ACTION
   height: 100%;
   width: auto;
 }
+
+.elementor-post__meta-data {
+  font-family: HelveticaNeueLTStd-Bd, Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  color: $black !important;
+  letter-spacing: 0.2em;
+  font-size: 1em !important;
+  border-bottom: 1px solid;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.elementor-post__title a {
+  border-bottom: 2px solid;
+}
