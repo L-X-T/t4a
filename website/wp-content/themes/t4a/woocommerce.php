@@ -40,10 +40,6 @@
 									?>
 								</section> <?php // end article section ?>
 
-								<footer class="article-footer cf">
-
-								</footer>
-
 								<?php comments_template(); ?>
 
 							</article>
@@ -53,5 +49,7 @@
 				</div>
 
 			</div>
+			<footer class="product-footer cf" style="background-image: url('<?php the_field('image_productfooter', 'options'); ?>')">
+			</footer>
 
 <?php get_footer(); ?>

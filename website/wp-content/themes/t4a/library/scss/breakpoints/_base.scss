@@ -654,6 +654,13 @@ POSTS & CONTENT STYLES
 
 		} /* end .hentry */
 
+		.product-footer {
+			position: relative;
+			height: 400px;
+			background-size: cover;
+			background-position: top center;
+		}
+
 		.single-title,
 		.page-title,
 		.entry-title {
@@ -1201,7 +1208,8 @@ COMMENT FORM STYLES
 FOOTER STYLES
 *********************/
 
-.hentry footer {
+.hentry footer,
+.product-footer {
   height: 250px;
 }
 

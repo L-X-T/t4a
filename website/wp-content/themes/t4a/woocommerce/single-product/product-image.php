@@ -35,18 +35,22 @@ $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_cl
 ) );
 ?>
 <div class="<?php echo esc_attr( implode( ' ', array_map( 'sanitize_html_class', $wrapper_classes ) ) ); ?>" data-columns="<?php echo esc_attr( $columns ); ?>" style="opacity: 0; transition: opacity .25s ease-in-out;">
-	<figure class="woocommerce-product-gallery__wrapper">
+
+<?php if ( get_field('pro-layout') === '1col' ) : ?>
+  <?php $image = get_field('1col_image'); 
+    if( !empty($image) ): ?>
+      <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+  <?php endif; ?>
+<?php endif; ?>
+  <figure class="woocommerce-product-gallery__wrapper">
 		<?php
 		if ( has_post_thumbnail() ) {
 		    if ( get_field('pro-layout') === '1col' ) {
-          $image = get_field('1col_image');
-          if( !empty($image) ): ?>
-              <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-          <?php endif;
+
+
             //wp_get_attachment_image( $post_thumbnail_id,  'two_thirds' );
             } else {
-			    //$html  = wc_get_gallery_image_html( $post_thumbnail_id, true );
-          $html  = wp_get_attachment_image( $post_thumbnail_id,  'product_thumb' );
+			         $html  = wc_get_gallery_image_html( $post_thumbnail_id, true );
             }
 		} else {
 			/*

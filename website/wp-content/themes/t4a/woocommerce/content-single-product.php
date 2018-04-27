@@ -61,6 +61,38 @@ if ( post_password_required() ) {
   			do_action( 'woocommerce_single_product_summary' );
         woocommerce_output_product_data_tabs();
   		?>
+      <?php global $product; /* price row */ ?>
+
+        <p class="t4a-master-price">
+          <?php if( get_field('alternative_price') ): ?>
+              <?php the_field('alternative_price'); ?>
+          <?php else : ?>
+              <?php echo $product->get_price_html(); ?> incl. 20% VAT
+          <?php endif; ?>
+        </p>
+
+
+        <?php /* info box */ ?>
+        <?php if( get_field('info_box') ): ?>
+          <div class="product-info-box">
+              <?php the_field('info_box'); ?>
+          </div>
+        <?php endif; ?>
+
+        <?php /* social sharer */ ?>
+
+        <?php $socialIcons = get_field('opt_social_icons', 'options'); if ($socialIcons) : ?>
+        <div class="product-social-sharer">
+            <ul class="social-icons">
+        		<?php foreach($socialIcons as $socialIcon) {
+        		    if (empty($socialIcon['sharer'])) continue;
+        			echo '<li><a href="' . sprintf($socialIcon['sharer'], get_permalink())  . '" target="_blank" title="' . $socialIcon['sharer_title'] . '"><img src="' . $socialIcon['icon'] .'" /></a></li>';
+        		} ?>
+            </ul>
+        </div>
+        <?php endif; ?>
+
+
   	</div>
     <div class="cf"></div>
   </div>

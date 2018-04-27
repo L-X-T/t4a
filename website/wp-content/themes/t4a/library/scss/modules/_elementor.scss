@@ -36,6 +36,13 @@ CALL TO ACTION
     .elementor-cta__title {
       position:absolute;
       color: $t4a-gold-light;
+      left:0;
+      top:50%;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
     }
 
     .elementor-cta__description {
@@ -125,4 +132,61 @@ CALL TO ACTION
 
 .elementor-post__title a {
   border-bottom: 2px solid;
+}
+
+.elementor-ribbon-inner {
+  background: $t4a-gold;
+}
+
+/**************
+MAGAZIN
+**************/
+
+.slick-next.slick-disabled,
+.slick-prev.slick-disabled {
+  visibility: hidden;
+}
+
+.elementor-slick-slider .slick-slider .slick-next,
+.elementor-slick-slider .slick-slider .slick-prev {
+  background-color: $t4a-gold;
+  width: 35px;
+  height: 35px;
+  border-radius: 100px;
+}
+
+.elementor-slick-slider .slick-next::before {
+  color: $white!important;
+  opacity:1;
+  padding-left:4px;
+}
+
+.elementor-slick-slider .slick-prev::before {
+  color: $white!important;
+  opacity:1;
+  padding-right:4px;
+}
+
+.elementor-slick-slider .slick-prev {
+    left: -50px;
+}
+
+.elementor-slick-slider .slick-next {
+    right: -50px;
+}
+
+/************
+FIX LAYOUT
+************/
+
+.elementor-cta--valign-middle .elementor-cta__content .elementor-content-item {
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  padding: 7%;
+  left: 0;
 }

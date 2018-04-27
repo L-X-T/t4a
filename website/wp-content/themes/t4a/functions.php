@@ -329,7 +329,7 @@ function product_col_style( $classes ) {
 
 
 // let editors edit the menu
-$role = get_role( 'editor' );
+$role = get_role( 'shop_manager' );
 $role->add_cap( 'edit_theme_options' );
 
 
