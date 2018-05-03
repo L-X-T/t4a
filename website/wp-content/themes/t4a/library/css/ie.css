@@ -344,7 +344,7 @@ HEADER STYLES
 /* line 107, ../scss/breakpoints/_768up.scss */
 .header .t4a-main-menu {
   position: fixed;
-  z-index: 100;
+  z-index: 99999;
   top: 3em;
   left: 3em;
 }
@@ -365,7 +365,7 @@ HEADER STYLES
 .header .t4a-newsletter-link,
 .header .t4a-sub-menu {
   position: fixed;
-  z-index: 100;
+  z-index: 99999;
   right: 3em;
   top: 3em;
 }
@@ -483,13 +483,18 @@ FOOTER STYLES
 .product-footer {
   height: 300px;
 }
+/* line 366, ../scss/breakpoints/_768up.scss */
+.home .hentry footer, .home
+.product-footer {
+  height: 500px;
+}
 
 /*
 you'll probably need to do quite a bit
 of overriding here if you styled them for
 mobile. Make sure to double check these!
 */
-/* line 374, ../scss/breakpoints/_768up.scss */
+/* line 378, ../scss/breakpoints/_768up.scss */
 .footer-links ul li {
   /*
   be careful with the depth of your menus.
@@ -522,6 +527,11 @@ LOGO HEADER
 .hentry footer,
 .product-footer {
   height: 380px;
+}
+/* line 25, ../scss/breakpoints/_1030up.scss */
+.home .hentry footer, .home
+.product-footer {
+  height: 600px;
 }
 
 /*

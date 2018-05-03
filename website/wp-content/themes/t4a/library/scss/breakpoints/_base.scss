@@ -650,6 +650,10 @@ POSTS & CONTENT STYLES
 				height: 400px;
 				background-size: cover;
 				background-position: top center;
+
+				.home & {
+					height:500px;
+				}
 			}
 
 		} /* end .hentry */

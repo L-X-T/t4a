@@ -106,7 +106,7 @@ HEADER STYLES
 
 	.t4a-main-menu {
 		position: fixed;
-		z-index: 100;
+		z-index: 99999;
 		top: 3em;
 		left: 3em;
 
@@ -127,7 +127,7 @@ HEADER STYLES
 	.t4a-newsletter-link,
 	.t4a-sub-menu {
 		position: fixed;
-		z-index: 100;
+		z-index: 99999;
 		right: 3em;
 		top: 3em;
 
@@ -362,6 +362,10 @@ FOOTER STYLES
 .hentry footer,
 .product-footer {
   height: 300px;
+
+	.home & {
+    height:500px;
+  }
 }
 
 /*
