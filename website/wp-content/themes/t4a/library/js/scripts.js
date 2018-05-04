@@ -116,15 +116,18 @@ function closeOffcanvasNav() {
  * Put all your regular jQuery in here.
 */
 (function($) {
-
+    // set parent active
+    $('li.current-menu-item.current_page_item').each(function(e) {
+        $this = $(this);
+        $this.parent().parent().addClass('current-menu-ancestor current-menu-parent');
+    });
+    
     $(document).ready(function($) {
-
         /*
          * Let's fire off the gravatar function
          * You can remove this if you don't need it
          */
         loadGravatars();
-
     }); /* end of as page load scripts */
 
     // toggle offcanvas
@@ -168,5 +171,4 @@ function closeOffcanvasNav() {
         $('input[name=frm_email]').focus();
         return false;
     });
-
 })(jQuery);

@@ -4,34 +4,28 @@
 
 				<div id="inner-content" class="wrap cf">
 
-					<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+					<main id="main" class="m-all cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+						<div id="logo-header"><a href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php the_field('opt_logo_header', 'options'); ?>" alt="Time4Africa"></a></div>
 
-						<article id="post-not-found" class="hentry cf">
+						<article id="post-not-found" class="hentry cf" style="text-align:center;">
 
 							<header class="article-header">
 
-								<h1><?php _e( 'Epic 404 - Article Not Found', 'bonestheme' ); ?></h1>
+								<h1><?php _e( '404 - Article Not Found', 'bonestheme' ); ?></h1>
 
 							</header>
 
 							<section class="entry-content">
 
-								<p><?php _e( 'The article you were looking for was not found, but maybe try looking again!', 'bonestheme' ); ?></p>
+								<p>The article you were looking for was not found, click <a href="<?php echo home_url(); ?>" rel="nofollow">here</a>.</p>
 
 							</section>
 
 							<section class="search">
 
-									<p><?php get_search_form(); ?></p>
+									<p><?php // get_search_form(); ?></p>
 
 							</section>
-
-							<footer class="article-footer">
-
-									<p><?php _e( 'This is the 404.php template.', 'bonestheme' ); ?></p>
-
-							</footer>
-
 						</article>
 
 					</main>

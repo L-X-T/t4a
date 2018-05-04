@@ -2296,11 +2296,11 @@ and more scalable.
   display: none;
 }
 /* line 480, ../scss/breakpoints/_base.scss */
-.t4a-main-menu .nav li.current-menu-item,
+.t4a-main-menu .nav li.current-menu-item > a,
 .t4a-main-menu .nav li.current_page_item > a,
-.t4a-sub-menu .nav li.current-menu-item,
+.t4a-sub-menu .nav li.current-menu-item > a,
 .t4a-sub-menu .nav li.current_page_item > a {
-  color: #ca912b;
+  color: #ca912b !important;
 }
 /* line 485, ../scss/breakpoints/_base.scss */
 .t4a-main-menu .nav li.current-page-parent > a,

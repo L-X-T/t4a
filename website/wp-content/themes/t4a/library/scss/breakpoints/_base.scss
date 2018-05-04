@@ -477,9 +477,9 @@ and more scalable.
 	}
 
 	/* highlight current page */
-	li.current-menu-item,
-	li.current_page_item >a {
-			color: $t4a-gold;
+	li.current-menu-item > a,
+	li.current_page_item > a {
+			color: $t4a-gold !important;
 	}
 
 	li.current-page-parent > a {
