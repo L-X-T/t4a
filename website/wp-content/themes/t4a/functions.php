@@ -59,8 +59,17 @@ class t4a_Walker extends Walker_Nav_Menu {
     $productsCatId = 0;
     $productsCats = get_the_terms( get_the_ID(), 'product_cat' );
     if (!empty($productsCats) && is_array($productsCats) && $item->object_id && get_field('product_cat', $item->object_id)) {
-      $productsCatId = $productsCats[0]->term_id;
 
+    $productsCatId = $productsCats[0]->term_id;
+    
+      /*
+      if ($productsCats[0]->parent != 0) {
+            $productsCatId = $productsCats[0]->parent;
+      } else {
+            $productsCatId = $productsCats[0]->term_id;
+      }
+      */
+      //var_dump( get_the_terms( get_the_ID(), 'product_cat' ) );
       if ($productsCatId == get_field('product_cat', $item->object_id)) {
         $classes[] = 'current-menu-item current_page_item';
         // die( the_title() );
