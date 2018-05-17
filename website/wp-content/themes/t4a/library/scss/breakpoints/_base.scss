@@ -52,9 +52,17 @@ body {
   	-moz-osx-font-smoothing: grayscale;
 }
 
+body.bodyLocked {
+	overflow:hidden;
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
 #container {
 	position: relative;
-	left: 0;
+	left:0;
 	transition: left $menu-transition;
 	overflow: hidden;
 }
@@ -269,7 +277,7 @@ HEADER STYLES
 		text-transform: uppercase;
 
 		.home & {
-			//color: $white;
+			color: $black;
 		}
 
 		&:hover, &:focus {
@@ -513,6 +521,7 @@ and more scalable.
 }
 
 
+
 .footer .nav {
 	display: inline-block;
 	border-bottom: 0;
@@ -632,6 +641,10 @@ HOME SLIDER STYLES
 /*********************
 POSTS & CONTENT STYLES
 *********************/
+
+.elementor-lightbox .elementor-lightbox-item {
+  padding:0;
+}
 
 /*
 #content {

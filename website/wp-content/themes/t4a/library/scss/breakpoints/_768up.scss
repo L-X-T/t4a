@@ -19,6 +19,16 @@ GENERAL STYLES
 
 body {}
 
+body.bodyLocked {
+	overflow:hidden;
+	position: relative;
+	top: auto!important;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+
 /******************************************************************
 H1, H2, H3, H4, H5 STYLES
 ******************************************************************/
@@ -95,6 +105,11 @@ LAYOUT & GRID STYLES
 }
 */
 
+.elementor-lightbox .elementor-lightbox-item {
+  padding: 70px 80px;
+}
+
+
 /*********************
 HEADER STYLES
 *********************/
@@ -106,7 +121,7 @@ HEADER STYLES
 
 	.t4a-main-menu {
 		position: fixed;
-		z-index: 99999;
+		z-index: 7777;
 		top: 3em;
 		left: 3em;
 
@@ -127,7 +142,7 @@ HEADER STYLES
 	.t4a-newsletter-link,
 	.t4a-sub-menu {
 		position: fixed;
-		z-index: 99999;
+		z-index: 7777;
 		right: 3em;
 		top: 3em;
 

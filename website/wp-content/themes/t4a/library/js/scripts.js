@@ -121,7 +121,7 @@ function closeOffcanvasNav() {
         $this = $(this);
         $this.parent().parent().addClass('current-menu-ancestor current-menu-parent');
     });
-    
+
     $(document).ready(function($) {
         /*
          * Let's fire off the gravatar function
@@ -171,4 +171,53 @@ function closeOffcanvasNav() {
         $('input[name=frm_email]').focus();
         return false;
     });
+
+    var ycoord = $(window).scrollTop();
+    var triggerPos = 'true';
+
+    //$(".elementor-post__thumbnail__link").click(function() {  //use a class, since your ID gets mangled
+    //  $('body').addClass('bodyLocked');     //add the class to the clicked element
+    //  ycoord = $(window).scrollTop();
+    //  ycoord = ycoord * -1;
+    //});
+
+    $('body').click(function(e) {
+    var target = $(e.target);
+
+    if(triggerPos == 'true' ){
+      ycoord = $(window).scrollTop();
+      ycoord = ycoord * -1;
+      //console.info(ycoord);
+      }
+    if($('.dialog-lightbox-widget').size() == 0 ){
+//      console.info("nix");
+      return;
+      }
+    if($('.dialog-lightbox-widget').is(':visible')){
+      //console.info(target);
+      if(target.is('.elementor-lightbox-prevent-close') || target.is('.eicon-chevron-right') || target.is('.eicon-chevron-left')){
+        //console.info("nix tun");
+        return;
+      } else {
+        $('body').removeClass('bodyLocked');
+        $('body').css('top', 'auto');
+        $(window).scrollTop($('body').data('ycoord'));
+        triggerPos = 'true';
+      //  console.info("remove Class");
+      }
+    }
+    });
+
+    $(window).scroll(function(){
+
+    if($('.dialog-lightbox-widget').size() == 0 ){
+      return;
+      }
+    if($('.dialog-lightbox-widget').is(':visible') && $('body:not(.bodyLocked)')){
+      $('body').css('top',ycoord + 'px');
+      $('body').addClass('bodyLocked');
+      triggerPos = 'false';
+    }
+    });
+
 })(jQuery);
